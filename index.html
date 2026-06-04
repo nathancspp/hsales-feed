@@ -348,6 +348,11 @@ body.export .wrap,body.export header,body.export .post-head,body.export .hint,
 body.export footer,body.export .navbtn,body.export .tag,body.export .track::-webkit-scrollbar{display:none!important}
 body.export .exportbox{display:block!important;width:1080px;height:1350px;position:relative;overflow:hidden}
 body.export .exportbox .slide{transform:none!important}
+/* Feed thumbnail grid */
+.feed-tile{padding:0;display:block}
+.feed-tile .n{z-index:10;background:rgba(0,0,0,.55);color:#fff;border-radius:4px;padding:3px 7px;pointer-events:none}
+.feed-tile .thumb{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;border-radius:6px}
+.feed-tile .thumb .slide{pointer-events:none}
 </style>
 </head>
 <body>
@@ -368,7 +373,7 @@ body.export .exportbox .slide{transform:none!important}
       <div>
         <div class="id">Prévia do grid · 12 posts</div>
         <h2>Feed completo em movimento</h2>
-        <p>Arraste os cards para testar a composição do grid antes de fechar os carrosséis. A ordem visual aqui é só de aprovação; não exporta nada.</p>
+        <p>Capas reais de cada post, escaladas. Arraste para planejar a composição do feed antes de publicar.</p>
       </div>
       <div class="grid-tools">
         <button class="mini-btn" type="button" data-reset-grid>Restaurar ordem</button>
@@ -826,7 +831,7 @@ body.export .exportbox .slide{transform:none!important}
             <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.28" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
             <div class="inner">
               <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-purple"><span class="dash"></span>Omnichannel</span></div>
-              <div class="headline"><h3>SEU HÓSPEDE ESTÁ<br>EM TODO LUGAR.</h3><span class="sub">Seu atendimento também.</span><div class="visual"><span class="chip">WhatsApp</span><span class="chip">Instagram</span><span class="chip">Facebook</span><span class="chip">Site</span></div></div>
+              <div class="headline"><h3>SEU HÓSPEDE<br>ESTÁ EM<br>TODO LUGAR.</h3><span class="sub">Seu atendimento também.</span><div class="visual"><span class="chip" style="background:#25D366;color:#fff;border-color:#25D366">WhatsApp</span><span class="chip" style="background:linear-gradient(135deg,#f77737,#e1306c,#833ab4);color:#fff;border:none">Instagram</span><span class="chip" style="background:#1877F2;color:#fff;border-color:#1877F2">Facebook</span><span class="chip">Site</span></div></div>
               <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:#fff"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span></div></div>
             </div>
           </div>
@@ -836,10 +841,10 @@ body.export .exportbox .slide{transform:none!important}
             <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.45" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
             <div class="inner">
               <div class="num">— 05</div>
-              <h3>Todos os canais no mesmo atendimento.</h3>
+              <h3>Todos os canais<br>no mesmo atendimento.</h3>
               <p class="lead2">A IA mantém o contexto em qualquer canal.<br>O hóspede nunca precisa repetir nada.</p>
               <div class="items"><div class="item"><b>1</b><span>WhatsApp</span></div><div class="item"><b>2</b><span>Instagram</span></div><div class="item"><b>3</b><span>Facebook</span></div><div class="item"><b>4</b><span>Site</span></div></div>
-              <div class="punch">Uma conversa só. Mesmo quando o canal <b>muda.</b></div>
+              <div class="punch">Uma conversa só.<br><b>Em todos os canais.</b></div>
               <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
             </div>
           </div>
@@ -849,7 +854,7 @@ body.export .exportbox .slide{transform:none!important}
             <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.48" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
             <div class="inner">
               <div class="num">— Na prática</div>
-              <h3>Uma caixa de entrada. Um histórico. Um funil.</h3>
+              <h3>Uma caixa de entrada.<br>Um histórico. Um funil.</h3>
               <p class="lead2">Sua equipe enxerga o que aconteceu, onde o lead está e qual é o próximo passo.</p>
               <div class="panelgrid"><div class="panel"><div class="label">Inbox único</div><div class="big">4 canais</div><div class="small">Sem conversa perdida.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div><div class="panel"><div class="label">Pipeline</div><div class="big">Atendimento → Reserva</div><div class="small">Tudo acompanhado.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div></div>
               <div class="turn">Todos os canais.<br>Uma única <b>venda.</b></div>
@@ -891,7 +896,7 @@ body.export .exportbox .slide{transform:none!important}
             <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
             <div class="inner">
               <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>Integrações</span></div>
-              <div class="headline"><h3>+200 INTEGRAÇÕES.<br>UMA ÚNICA OPERAÇÃO.</h3><span class="sub">Conecte o que<br>seu hotel já usa.</span><div class="visual"><span class="chip">PMS</span><span class="chip">Motor</span><span class="chip">Pagamentos</span><span class="chip">CRM</span></div></div>
+              <div class="headline"><h3><span style="font-size:160px;letter-spacing:-0.05em;line-height:0.85;display:block">+200</span><span style="color:var(--roxo)">INTEGRAÇÕES.</span><br>UMA ÚNICA OPERAÇÃO.</h3><span class="sub" style="max-width:none">Conecte o que seu hotel já usa.</span><div class="visual"><span class="chip">PMS</span><span class="chip">Motor</span><span class="chip">Pagamentos</span><span class="chip">CRM</span></div></div>
               <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
             </div>
           </div>
@@ -1216,7 +1221,7 @@ body.export .exportbox .slide{transform:none!important}
             <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
             <div class="inner">
               <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>Pós-venda e reputação</span></div>
-              <div class="headline"><h3>OS MELHORES HOTÉIS<br>NÃO ESPERAM RECLAMAR.</h3><span class="sub">Eles perguntam antes.</span><div class="visual"><span class="chip">NPS</span><span class="chip">Avaliação</span><span class="chip">Retorno</span></div></div>
+              <div class="headline"><h3>OS MELHORES HOTÉIS<br>NÃO ESPERAM RECLAMAR.</h3><span class="sub" style="max-width:none">Pesquisa de satisfação automática.</span><div class="visual"><span class="chip">NPS</span><span class="chip">Avaliação</span><span class="chip">Retorno</span></div></div>
               <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
             </div>
           </div>
@@ -1394,6 +1399,87 @@ if(board){
     });
   }
 }
+
+// Feed thumbnail: clone capas reais nos tiles do grid
+function buildFeedThumbs(){
+  document.querySelectorAll('[data-feed-board] .feed-tile').forEach(tile=>{
+    const n=String(tile.dataset.order).padStart(2,'0');
+    const src=document.querySelector('.slide[data-id="p'+n+'s1"]');
+    if(!src)return;
+    const clone=src.cloneNode(true);
+    clone.style.transform='none';
+    const thumb=document.createElement('div');
+    thumb.className='thumb';
+    thumb.appendChild(clone);
+    const badge=tile.querySelector('.n');
+    tile.innerHTML='';
+    if(badge)tile.appendChild(badge);
+    tile.appendChild(thumb);
+    function doScale(){const s=tile.clientWidth/1080;clone.style.cssText='width:1080px;height:1350px;transform:scale('+s+');transform-origin:top left;position:absolute;top:0;left:0'}
+    doScale();
+    new ResizeObserver(doScale).observe(tile);
+  });
+}
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(()=>setTimeout(buildFeedThumbs,150))}else{setTimeout(buildFeedThumbs,400)}
+
+// Geo variation — posições e formas variadas por slide, conversando entre si
+(function(){
+  var HEX='M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34';
+  var DIA='M60 6 L114 60 L60 114 L6 60 Z M60 6 L60 114 M6 60 L114 60';
+  var W='#fff';var L='var(--lavanda)';
+  // [pos, size, shape H=hex D=dia, stroke color, opacity]
+  var M={
+    p04s1:[['top:6%;left:-5%',260,'H',L,.50],['bottom:4%;right:-6%',150,'D',L,.35]],
+    p04s2:[['top:8%;right:-5%',200,'D',L,.45],['bottom:6%;left:-6%',140,'H',L,.30]],
+    p04s3:[['bottom:5%;left:-5%',220,'H',W,.32],['top:8%;right:-5%',160,'D',W,.22]],
+    p04s4:[['top:6%;left:-6%',200,'D',L,.40],['bottom:18%;right:-6%',160,'H',L,.28]],
+    p05s1:[['top:8%;right:-5%',250,'H',W,.28],['top:42%;left:-6%',160,'D',W,.20]],
+    p05s2:[['top:6%;left:-5%',220,'H',L,.45],['bottom:5%;right:-6%',150,'D',L,.35]],
+    p05s3:[['top:8%;right:-5%',200,'D',L,.48],['bottom:5%;left:-6%',150,'H',L,.32]],
+    p05s4:[['bottom:10%;left:-6%',220,'H',L,.38],['top:8%;right:-5%',150,'D',L,.25]],
+    p06s1:[['top:8%;right:-5%',260,'D',L,.50],['top:38%;left:-6%',160,'H',L,.35]],
+    p06s2:[['bottom:6%;left:-5%',220,'H',L,.45],['top:8%;right:-5%',160,'D',L,.35]],
+    p06s3:[['top:8%;right:-5%',200,'H',L,.48],['bottom:6%;left:-6%',160,'D',L,.32]],
+    p06s4:[['top:6%;left:-6%',200,'D',L,.40],['bottom:18%;right:-6%',160,'H',L,.28]],
+    p07s1:[['top:8%;right:-5%',250,'H',L,.55],['bottom:5%;right:-6%',150,'D',L,.35]],
+    p07s2:[['top:6%;left:-5%',200,'D',L,.45],['bottom:6%;right:-6%',140,'H',L,.30]],
+    p07s3:[['top:40%;right:-6%',200,'H',L,.48],['top:6%;left:-5%',150,'D',L,.32]],
+    p07s4:[['bottom:18%;left:-6%',220,'D',L,.40],['top:8%;right:-5%',150,'H',L,.28]],
+    p08s1:[['bottom:5%;left:-5%',220,'H',L,.50],['top:8%;right:-5%',160,'D',L,.38]],
+    p08s2:[['top:8%;right:-5%',220,'H',L,.45],['bottom:6%;left:-6%',150,'D',L,.35]],
+    p08s3:[['top:6%;left:-5%',200,'D',L,.48],['top:8%;right:-5%',150,'H',L,.35]],
+    p08s4:[['top:8%;right:-5%',220,'H',L,.40],['bottom:18%;left:-6%',180,'D',L,.28]],
+    p09s1:[['top:8%;right:-5%',240,'H',W,.35],['bottom:6%;left:-6%',170,'D',W,.25]],
+    p09s2:[['top:8%;right:-5%',200,'D',L,.45],['bottom:6%;left:-6%',150,'H',L,.32]],
+    p09s3:[['bottom:5%;right:-6%',200,'H',L,.48],['top:6%;left:-5%',150,'D',L,.30]],
+    p09s4:[['bottom:10%;left:-6%',220,'H',L,.40],['top:8%;right:-5%',150,'D',L,.28]],
+    p10s1:[['top:8%;right:-5%',240,'H',L,.55],['top:40%;right:-6%',140,'D',L,.35]],
+    p10s2:[['bottom:6%;right:-6%',200,'D',L,.45],['top:6%;left:-5%',160,'H',L,.30]],
+    p10s3:[['top:8%;right:-5%',220,'H',L,.48],['top:6%;left:-5%',150,'D',L,.32]],
+    p10s4:[['top:8%;right:-5%',200,'D',L,.40],['bottom:18%;left:-6%',160,'H',L,.28]],
+    p11s1:[['top:8%;right:-5%',240,'D',L,.50],['bottom:5%;left:-6%',160,'H',L,.35]],
+    p11s2:[['top:6%;left:-5%',200,'H',L,.45],['bottom:6%;right:-6%',150,'D',L,.30]],
+    p11s3:[['top:8%;right:-5%',200,'D',L,.48],['top:42%;left:-6%',150,'H',L,.30]],
+    p11s4:[['bottom:6%;right:-6%',200,'H',L,.40],['top:6%;left:-6%',150,'D',L,.28]],
+    p12s1:[['top:8%;right:-5%',240,'H',W,.28],['bottom:5%;left:-6%',170,'D',W,.20]],
+    p12s2:[['bottom:6%;left:-5%',220,'D',W,.25],['top:8%;right:-5%',160,'H',W,.18]],
+    p12s3:[['top:6%;left:-6%',200,'H',L,.35],['bottom:5%;right:-6%',150,'D',L,.25]],
+    p12s4:[['top:8%;right:-5%',220,'D',L,.40],['bottom:18%;left:-6%',160,'H',L,.28]]
+  };
+  Object.keys(M).forEach(function(id){
+    var slide=document.querySelector('.slide[data-id="'+id+'"]');
+    if(!slide)return;
+    slide.querySelectorAll('.geo').forEach(function(g){g.remove();});
+    M[id].forEach(function(c){
+      var d=c[2]==='H'?HEX:DIA;
+      var div=document.createElement('div');
+      div.className='geo';
+      div.style.cssText=c[0]+';width:'+c[1]+'px';
+      div.innerHTML='<svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:'+c[3]+';opacity:'+c[4]+'" d="'+d+'"/></svg>';
+      slide.insertBefore(div,slide.firstChild);
+    });
+  });
+})();
 
 // MODO EXPORT: ?export=p01s1 → isola 1 slide em 1080x1350 (pra render PNG)
 const exp=new URLSearchParams(location.search).get('export');
