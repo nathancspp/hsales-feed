@@ -353,6 +353,28 @@ body.export .exportbox .slide{transform:none!important}
 .feed-tile .n{z-index:10;background:rgba(0,0,0,.55);color:#fff;border-radius:4px;padding:3px 7px;pointer-events:none}
 .feed-tile .thumb{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;border-radius:6px}
 .feed-tile .thumb .slide{pointer-events:none}
+
+/* ===== Feat-icons — caixas de ícone roxas (identidade de marca) ===== */
+.feat-icon{display:grid;place-items:center;flex-shrink:0;
+  background:linear-gradient(135deg,var(--roxo),var(--roxo-vibrante));
+  box-shadow:0 12px 28px oklch(0.5 0.2 285/.35);border-radius:22px}
+.feat-icon svg{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.feat-icon.sm{width:80px;height:80px;border-radius:20px}.feat-icon.sm svg{width:36px;height:36px}
+.feat-icon.md{width:110px;height:110px;border-radius:26px}.feat-icon.md svg{width:50px;height:50px}
+.feat-icon.lg{width:150px;height:150px;border-radius:34px}.feat-icon.lg svg{width:68px;height:68px}
+.feat-icon.light{background:rgba(255,255,255,.16);box-shadow:none;border:1px solid rgba(255,255,255,.24)}
+.feat-icon.light svg{stroke:rgba(255,255,255,.92)}
+.feat-icon.outline{background:#fff;border:2px solid var(--lavanda);box-shadow:0 8px 20px oklch(0.5 0.1 285/.10)}
+.feat-icon.outline svg{stroke:var(--roxo)}
+.feat-icon.on-lav{background:var(--lavanda-suave);box-shadow:0 8px 20px oklch(0.5 0.1 285/.12)}
+.feat-icon.on-lav svg{stroke:var(--roxo)}
+.icon-row{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
+.icon-cell{display:flex;flex-direction:column;align-items:center;gap:14px}
+.ic-label{font-size:20px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;text-align:center}
+/* Upgrade step badges para roxo sólido */
+.storylist .item b{background:linear-gradient(135deg,var(--roxo),var(--roxo-vibrante))!important;color:#fff!important;box-shadow:0 8px 18px oklch(0.5 0.2 285/.28)!important}
+.storylist.purple .item b,.storylist.dark .item b{background:rgba(255,255,255,.22)!important;box-shadow:none!important}
+.p3steps .step b{background:linear-gradient(135deg,var(--roxo),var(--roxo-vibrante))!important;color:#fff!important;box-shadow:0 8px 18px oklch(0.5 0.2 285/.28)!important}
 </style>
 </head>
 <body>
@@ -422,6 +444,12 @@ body.export .exportbox .slide{transform:none!important}
               <div class="headline">
                 <h3>ATENDIMENTO. RESERVAS.<br>PAGAMENTOS. PÓS-VENDA.</h3>
                 <span class="sub"><span class="b">Tudo no automático.</span><br>24 horas por dia, todos os dias.<br>Em qualquer idioma.</span>
+                <div class="icon-row" style="margin-top:52px">
+                  <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                  <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></div>
+                  <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg></div>
+                  <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                </div>
               </div>
               <div class="bottom">
                 <div class="swipe">Arraste <span class="arrow">→</span></div>
@@ -576,6 +604,7 @@ body.export .exportbox .slide{transform:none!important}
                 <span class="kicker on-purple"><span class="dash"></span>A regra mais cara</span>
               </div>
               <div class="mid">
+                <div class="feat-icon md" style="margin-bottom:38px"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
                 <div class="eyebrow2">A regra mais cara da hotelaria:</div>
                 <div class="big">QUEM RESPONDE<br>PRIMEIRO,<br>VENDE PRIMEIRO.</div>
                 <div class="sub">Cada minuto de espera é<br>uma reserva que vai embora.</div>
@@ -766,7 +795,13 @@ body.export .exportbox .slide{transform:none!important}
             <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
             <div class="inner">
               <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>Evolução</span></div>
-              <div class="headline"><h3>SEU HOTEL AINDA<br>USA <span style="color:var(--roxo)">CHATBOT</span>?</h3><span class="sub" style="max-width:none">Receba a Inteligência Artificial.</span><div class="visual"><span class="chip">Rígido</span><span class="chip">Engessado</span><span class="chip">Genérico</span></div></div>
+              <div class="headline"><h3>SEU HOTEL AINDA<br>USA <span style="color:var(--roxo)">CHATBOT</span>?</h3>
+                <div style="display:flex;align-items:center;gap:26px;margin:40px 0 0">
+                  <div class="feat-icon sm outline"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h8"/></svg></div>
+                  <span style="font-size:40px;font-weight:900;color:var(--roxo)">→</span>
+                  <div class="feat-icon sm"><svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1M6.343 6.343l-.707-.707M17.657 6.343l.707-.707M3 12h1M20 12h1M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
+                </div>
+                <span class="sub" style="max-width:none;margin-top:26px;display:block">Receba a Inteligência Artificial.</span><div class="visual"><span class="chip">Rígido</span><span class="chip">Engessado</span><span class="chip">Genérico</span></div></div>
               <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
             </div>
           </div>
@@ -1026,7 +1061,24 @@ body.export .exportbox .slide{transform:none!important}
             <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
             <div class="inner">
               <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>Pagamento integrado</span></div>
-              <div class="headline"><h3>CONVERSOU.<br>PAGOU.<br>RESERVOU.</h3><span class="sub">Sem sair do WhatsApp.</span><div class="visual"><span class="chip">Cotação</span><span class="chip">Link</span><span class="chip">Confirmação</span></div></div>
+              <div class="headline"><h3>CONVERSOU.<br>PAGOU.<br>RESERVOU.</h3><span class="sub">Sem sair do WhatsApp.</span>
+                <div class="icon-row" style="margin-top:44px;align-items:center">
+                  <div class="icon-cell">
+                    <div class="feat-icon sm"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                    <span class="ic-label" style="color:var(--quase-preto)">Cotação</span>
+                  </div>
+                  <span style="font-size:40px;font-weight:900;color:var(--roxo);margin-bottom:34px">→</span>
+                  <div class="icon-cell">
+                    <div class="feat-icon sm"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+                    <span class="ic-label" style="color:var(--quase-preto)">Link</span>
+                  </div>
+                  <span style="font-size:40px;font-weight:900;color:var(--roxo);margin-bottom:34px">→</span>
+                  <div class="icon-cell">
+                    <div class="feat-icon sm"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-2.99"/></svg></div>
+                    <span class="ic-label" style="color:var(--quase-preto)">Confirmação</span>
+                  </div>
+                </div>
+              </div>
               <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
             </div>
           </div>
@@ -1091,7 +1143,22 @@ body.export .exportbox .slide{transform:none!important}
             <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.28" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
             <div class="inner">
               <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-purple"><span class="dash"></span>Jornada do hóspede</span></div>
-              <div class="headline"><h3>DA RESERVA<br>AO CHECK-OUT.</h3><span class="sub">Cada mensagem, no momento certo.</span><div class="visual"><span class="chip">Antes</span><span class="chip">Durante</span><span class="chip">Depois</span></div></div>
+              <div class="headline"><h3>DA RESERVA<br>AO CHECK-OUT.</h3><span class="sub">Cada mensagem, no momento certo.</span>
+                <div class="icon-row" style="margin-top:44px">
+                  <div class="icon-cell">
+                    <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></div>
+                    <span class="ic-label" style="color:rgba(255,255,255,.85)">Antes</span>
+                  </div>
+                  <div class="icon-cell">
+                    <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+                    <span class="ic-label" style="color:rgba(255,255,255,.85)">Durante</span>
+                  </div>
+                  <div class="icon-cell">
+                    <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
+                    <span class="ic-label" style="color:rgba(255,255,255,.85)">Depois</span>
+                  </div>
+                </div>
+              </div>
               <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:#fff"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span></div></div>
             </div>
           </div>
@@ -1286,7 +1353,26 @@ body.export .exportbox .slide{transform:none!important}
             <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.28" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
             <div class="inner">
               <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-purple"><span class="dash"></span>CTA final</span></div>
-              <div class="headline"><h3>SEU HOTEL<br>FUNCIONA 24H.</h3><span class="sub">Suas vendas também.</span><div class="visual"><span class="chip">Atende</span><span class="chip">Reserva</span><span class="chip">Cobra</span><span class="chip">Acompanha</span></div></div>
+              <div class="headline"><h3>SEU HOTEL<br>FUNCIONA 24H.</h3><span class="sub">Suas vendas também.</span>
+                <div class="icon-row" style="margin-top:44px;gap:22px">
+                  <div class="icon-cell">
+                    <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                    <span class="ic-label" style="color:rgba(255,255,255,.78);font-size:18px">Atende</span>
+                  </div>
+                  <div class="icon-cell">
+                    <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></div>
+                    <span class="ic-label" style="color:rgba(255,255,255,.78);font-size:18px">Reserva</span>
+                  </div>
+                  <div class="icon-cell">
+                    <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg></div>
+                    <span class="ic-label" style="color:rgba(255,255,255,.78);font-size:18px">Cobra</span>
+                  </div>
+                  <div class="icon-cell">
+                    <div class="feat-icon sm light"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-2.99"/></svg></div>
+                    <span class="ic-label" style="color:rgba(255,255,255,.78);font-size:18px">Acompanha</span>
+                  </div>
+                </div>
+              </div>
               <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:#fff"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span></div></div>
             </div>
           </div>
