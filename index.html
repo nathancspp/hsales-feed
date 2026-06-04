@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSales — Feed Vitrine · Portfólio de Criativos</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Portfólio de criativos do Feed Vitrine da HSales — aprovação de carrosséis para Instagram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --roxo:#5B3FD9; --roxo-vibrante:#6B4DE6; --roxo-escuro:#4A32B0;
+  --lavanda:#C4B5F4; --lavanda-suave:#EDE8FB; --cinza-lavanda:#EEEDF6;
+  --branco:#FFFFFF; --quase-preto:#1A1A2E; --corpo:#585770; --alto-relevo:#2A1A72;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--quase-preto);
+  background:radial-gradient(1200px 700px at 80% -10%, var(--lavanda-suave), transparent 55%), #F6F5FB;
+  -webkit-font-smoothing:antialiased;line-height:1.6;padding-bottom:80px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* ---------- Header ---------- */
+header{padding:54px 0 30px}
+.brand{display:flex;align-items:center;gap:12px;--s:42px}
+.logo-mark{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;
+  gap:calc(var(--s)*0.07);width:var(--s);height:var(--s);border-radius:calc(var(--s)*0.28);background:var(--roxo)}
+.logo-mark::after{content:"";position:absolute;z-index:-1;left:14%;bottom:calc(var(--s)*-0.04);
+  width:calc(var(--s)*0.34);height:calc(var(--s)*0.34);background:var(--roxo);border-radius:0 0 0 72%;transform:rotate(8deg)}
+.logo-mark .bar{position:relative;z-index:1;width:calc(var(--s)*0.16);height:calc(var(--s)*0.5);
+  background:#fff;border-radius:calc(var(--s)*0.055);box-shadow:0 calc(var(--s)*0.055) 0 var(--alto-relevo)}
+.logo-mark .dot{position:relative;z-index:1;width:calc(var(--s)*0.17);height:calc(var(--s)*0.17);
+  background:#fff;border-radius:calc(var(--s)*0.05);box-shadow:0 calc(var(--s)*0.055) 0 var(--alto-relevo)}
+.logo-word{font-weight:900;font-size:calc(var(--s)*0.74);letter-spacing:-0.03em;color:var(--quase-preto)}
+.kicker{display:inline-flex;align-items:center;gap:8px;margin-top:30px;
+  font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--roxo);background:var(--lavanda-suave);padding:8px 16px;border-radius:100px}
+h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-0.03em;line-height:1.05;margin:18px 0 14px}
+.sub{color:var(--corpo);font-size:1.05rem;max-width:60ch}
+
+/* ---------- Post card ---------- */
+.post{background:#fff;border-radius:24px;box-shadow:0 20px 60px oklch(0.5 0.12 285 / 0.10);
+  border:1px solid #ECEAF6;margin-top:46px;overflow:hidden}
+.post-head{padding:32px 34px 0;display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between}
+.post-head .id{font-size:0.8rem;font-weight:800;color:var(--roxo);letter-spacing:0.05em;text-transform:uppercase}
+.post-head h2{font-size:1.5rem;font-weight:800;letter-spacing:-0.02em}
+.post-head .meta{font-size:0.85rem;color:var(--corpo);font-weight:600}
+.status{display:inline-flex;align-items:center;gap:7px;font-size:0.78rem;font-weight:700;
+  padding:6px 14px;border-radius:100px;background:#FFF4D6;color:#9A6B00}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:#E0A100}
+
+/* ---------- Carousel ---------- */
+.carousel{position:relative;padding:26px 0 8px}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:6px 34px 22px;scrollbar-width:thin;scrollbar-color:var(--lavanda) transparent}
+.track::-webkit-scrollbar{height:8px}
+.track::-webkit-scrollbar-thumb{background:var(--lavanda);border-radius:100px}
+.track::-webkit-scrollbar-track{background:transparent}
+.frame{flex:0 0 auto;width:300px;scroll-snap-align:center;border-radius:16px;overflow:hidden;
+  box-shadow:0 12px 30px oklch(0.4 0.1 285 / 0.16);border:1px solid #ECEAF6;background:#fff;
+  position:relative;transition:transform .35s var(--ease)}
+.frame:hover{transform:translateY(-4px)}
+.frame img{width:100%;display:block;aspect-ratio:1080/1350;object-fit:cover}
+.frame .tag{position:absolute;top:12px;left:12px;background:rgba(26,26,46,.72);color:#fff;
+  font-size:0.7rem;font-weight:700;padding:5px 11px;border-radius:100px;backdrop-filter:blur(6px)}
+.hint{padding:0 34px 28px;color:var(--corpo);font-size:0.85rem;display:flex;align-items:center;gap:8px}
+.hint .arrow{color:var(--roxo);font-weight:900}
+
+/* nav arrows (desktop) */
+.navbtn{position:absolute;top:46%;transform:translateY(-50%);z-index:5;
+  width:48px;height:48px;border-radius:50%;border:1px solid #E5E3F0;background:#fff;
+  display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 22px oklch(0.4 0.1 285 / 0.16);
+  transition:transform .25s var(--ease),background .25s,color .25s;color:var(--roxo);font-size:1.3rem;font-weight:800}
+.navbtn:hover{background:var(--roxo);color:#fff;transform:translateY(-50%) scale(1.08)}
+.navbtn.prev{left:8px} .navbtn.next{right:8px}
+@media(max-width:760px){.navbtn{display:none}.frame{width:78vw}}
+
+/* ---------- Footer ---------- */
+footer{text-align:center;margin-top:60px;color:var(--corpo);font-size:0.85rem}
+footer b{color:var(--roxo)}
+.empty{margin-top:46px;padding:50px;text-align:center;border:2px dashed var(--lavanda);
+  border-radius:24px;color:var(--corpo)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span>
+      <span class="logo-word">Sales</span>
+    </div>
+    <span class="kicker">Feed Vitrine · Portfólio de Criativos</span>
+    <h1>Carrosséis para aprovação</h1>
+    <p class="sub">Conjunto de posts do Feed Vitrine da HSales para Instagram. Arraste cada carrossel para ver os slides na sequência. Formato final 1080×1350.</p>
+  </header>
+
+  <!-- ============ POST 01 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 01 · Manifesto da marca</div>
+        <h2>Atendimento. Reservas. Pagamentos.</h2>
+      </div>
+      <span class="status">Em aprovação</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+        <div class="frame"><span class="tag">1 · Capa</span><img src="assets/post01-slide1.png" alt="Slide 1 — Capa"></div>
+        <div class="frame"><span class="tag">2 · Problema</span><img src="assets/post01-slide2.png" alt="Slide 2 — Problema"></div>
+        <div class="frame"><span class="tag">3 · Virada</span><img src="assets/post01-slide3.png" alt="Slide 3 — Virada"></div>
+        <div class="frame"><span class="tag">4 · CTA</span><img src="assets/post01-slide4.png" alt="Slide 4 — CTA"></div>
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
+  <!-- Próximos posts entram aqui conforme produzidos -->
+
+  <footer>
+    <p>Portfólio interno de criativos · <b>HSales</b> · Feed Vitrine</p>
+  </footer>
+</div>
+
+<script>
+// Setas de navegação por carrossel
+document.querySelectorAll('.carousel').forEach(car=>{
+  const track=car.querySelector('.track');
+  const step=()=>Math.min(track.clientWidth*0.85, 340);
+  car.querySelector('.prev').onclick=()=>track.scrollBy({left:-step(),behavior:'smooth'});
+  car.querySelector('.next').onclick=()=>track.scrollBy({left:step(),behavior:'smooth'});
+});
+</script>
+</body>
+</html>
