@@ -208,6 +208,140 @@ footer b{color:var(--roxo)}
 .p2rule .sub{margin-top:38px;font-size:40px;color:var(--lavanda);font-weight:500;line-height:1.35;max-width:24ch}
 .p2rule .bottom{display:flex;justify-content:space-between;align-items:center}
 
+/* ---------- Prévia do grid completo ---------- */
+.grid-preview{margin-top:34px;background:#fff;border:1px solid #ECEAF6;border-radius:24px;
+  box-shadow:0 20px 60px oklch(0.5 0.12 285 / 0.10);padding:28px 34px 34px}
+.grid-preview-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:22px}
+.grid-preview .id{font-size:.8rem;font-weight:800;color:var(--roxo);letter-spacing:.05em;text-transform:uppercase}
+.grid-preview h2{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;margin-top:2px}
+.grid-preview p{color:var(--corpo);font-size:.9rem;max-width:60ch;margin-top:4px}
+.grid-tools{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.mini-btn{border:1px solid #E5E3F0;background:#fff;color:var(--roxo);font-weight:800;
+  border-radius:100px;padding:9px 14px;cursor:pointer;font-family:inherit;font-size:.82rem}
+.mini-btn:hover{background:var(--lavanda-suave)}
+.feed-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:720px}
+.feed-tile{aspect-ratio:1;border-radius:6px;padding:14px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;text-align:center;cursor:grab;
+  user-select:none;border:1px solid rgba(255,255,255,.42);transition:transform .18s var(--ease),box-shadow .18s var(--ease),opacity .18s}
+.feed-tile:active{cursor:grabbing}
+.feed-tile.dragging{opacity:.45;transform:scale(.96)}
+.feed-tile.over{box-shadow:inset 0 0 0 3px var(--roxo)}
+.feed-tile .n{position:absolute;top:10px;left:10px;font-size:.72rem;font-weight:900;opacity:.55}
+.feed-tile .t{font-size:clamp(.68rem,1.9vw,1.02rem);font-weight:900;line-height:1.08;letter-spacing:-.03em}
+.feed-tile .s{font-size:clamp(.52rem,1.3vw,.72rem);font-weight:700;line-height:1.2;margin-top:7px;opacity:.78}
+.feed-tile .mk{position:absolute;right:-18px;bottom:-18px;width:72px;height:72px;border:2px solid currentColor;
+  opacity:.16;transform:rotate(10deg)}
+.tile-roxo{background:radial-gradient(150px 110px at 80% -10%,var(--roxo-vibrante),transparent 60%),var(--roxo);color:#fff}
+.tile-cinza{background:var(--cinza-lavanda);color:var(--quase-preto)}
+.tile-branco{background:#fff;color:var(--quase-preto);border-color:#ECEAF6}
+.tile-lav{background:var(--lavanda-suave);color:var(--quase-preto)}
+.tile-preto{background:radial-gradient(150px 110px at 80% 0,#2c1e63,transparent 60%),var(--quase-preto);color:#fff}
+@media(max-width:760px){.grid-preview{padding:24px 18px}.grid-preview-head{flex-direction:column}.feed-board{max-width:none}.feed-tile{padding:9px}}
+
+/* ===== POST 03 — Mensagem recebida. Reserva fechada. ===== */
+.p3cap{background:radial-gradient(820px 620px at 86% -12%,var(--lavanda-suave),transparent 58%),var(--branco)}
+.p3cap .top{display:flex;justify-content:space-between;align-items:center}
+.p3cap .headline{margin-top:auto;margin-bottom:auto}
+.p3cap .headline h3{font-size:104px;font-weight:900;line-height:.96;letter-spacing:-.045em;color:var(--quase-preto);max-width:11ch}
+.p3cap .headline h3 .hl{color:var(--roxo)}
+.p3cap .headline .sub{display:block;margin-top:38px;font-size:42px;font-weight:700;line-height:1.18;color:var(--corpo);max-width:18ch}
+.p3cap .path{margin-top:54px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:22px;max-width:760px}
+.p3cap .bubble{background:var(--cinza-lavanda);border-radius:28px 28px 28px 8px;padding:26px 30px;color:var(--quase-preto);font-size:30px;font-weight:800;box-shadow:0 10px 28px oklch(.5 .1 285/.08)}
+.p3cap .done{background:linear-gradient(135deg,var(--roxo),var(--roxo-vibrante));color:#fff;border-radius:28px 28px 8px 28px;padding:26px 30px;font-size:30px;font-weight:900;box-shadow:0 12px 28px oklch(.5 .2 285/.32)}
+.p3cap .arr{font-size:42px;font-weight:900;color:var(--roxo)}
+.p3cap .bottom{display:flex;justify-content:space-between;align-items:flex-end}
+.p3cap .swipe{display:flex;align-items:center;gap:14px;color:var(--roxo);font-size:24px;font-weight:700}
+
+.p3steps{background:var(--cinza-lavanda)}
+.p3steps .num{font-size:30px;font-weight:800;color:var(--lavanda);letter-spacing:.08em}
+.p3steps h3{margin-top:30px;font-size:76px;font-weight:900;line-height:1;letter-spacing:-.04em;color:var(--quase-preto);max-width:12ch}
+.p3steps .lead2{margin-top:30px;font-size:32px;line-height:1.35;color:var(--corpo);font-weight:600;max-width:23ch}
+.p3steps .steps{margin-top:42px;display:grid;grid-template-columns:1fr;gap:14px}
+.p3steps .step{display:flex;align-items:center;gap:22px;background:#fff;border-radius:20px;padding:20px 26px;box-shadow:0 8px 22px oklch(.5 .1 285/.07)}
+.p3steps .step b{width:54px;height:54px;border-radius:16px;background:var(--lavanda-suave);color:var(--roxo);display:grid;place-items:center;font-size:24px}
+.p3steps .step span{font-size:34px;font-weight:800;color:var(--quase-preto);letter-spacing:-.02em}
+.p3steps .punch{margin-top:auto;font-size:40px;font-weight:800;line-height:1.18;letter-spacing:-.02em;color:var(--quase-preto);max-width:22ch}
+.p3steps .punch b{color:var(--roxo)}
+.p3steps .bottom{margin-top:34px;display:flex;justify-content:space-between;align-items:center}
+
+.p3context{background:var(--branco)}
+.p3context .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:24px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--roxo);background:var(--lavanda-suave);padding:13px 24px;border-radius:100px}
+.p3context .eyebrow .dash{width:18px;height:2.5px;background:currentColor;border-radius:2px}
+.p3context h3{margin-top:42px;font-size:72px;font-weight:900;line-height:1;letter-spacing:-.04em;color:var(--quase-preto);max-width:12ch}
+.p3context .copy{margin-top:26px;font-size:32px;line-height:1.35;color:var(--corpo);font-weight:600;max-width:24ch}
+.p3context .mock{margin-top:44px;display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.p3context .chatbox,.p3context .pipebox{background:var(--cinza-lavanda);border-radius:28px;padding:28px;box-shadow:0 10px 28px oklch(.5 .1 285/.07)}
+.p3context .msg{font-size:25px;font-weight:700;line-height:1.28;background:#fff;border-radius:18px 18px 18px 6px;padding:18px 20px;color:var(--quase-preto)}
+.p3context .msg + .msg{margin-top:14px;background:var(--roxo);color:#fff;border-radius:18px 18px 6px 18px}
+.p3context .tagline{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap}
+.p3context .pill{background:#fff;color:var(--roxo);border:1px solid var(--lavanda);border-radius:100px;padding:8px 13px;font-size:20px;font-weight:800}
+.p3context .lane{background:#fff;border-radius:18px;padding:18px;margin-bottom:12px;border-left:7px solid var(--roxo)}
+.p3context .lane:nth-child(2){border-left-color:#4F8DF7}
+.p3context .lane:nth-child(3){border-left-color:#23A36B}
+.p3context .lane .l{font-size:18px;font-weight:800;color:var(--corpo);text-transform:uppercase;letter-spacing:.05em}
+.p3context .lane .v{font-size:28px;font-weight:900;color:var(--quase-preto);letter-spacing:-.02em}
+.p3context .turn{margin-top:auto;font-size:38px;font-weight:900;line-height:1.12;color:var(--quase-preto);letter-spacing:-.03em}
+.p3context .turn b{color:var(--roxo)}
+.p3context .bottom{margin-top:34px;display:flex;justify-content:space-between;align-items:center}
+
+
+
+/* ===== POSTS 04-12 - templates leves para lote ===== */
+.storycap{background:var(--branco)}
+.storycap.cap-purple{background:radial-gradient(900px 600px at 80% -10%,var(--roxo-vibrante),transparent 60%),radial-gradient(700px 500px at -5% 110%,var(--roxo-escuro),transparent 55%),var(--roxo)}
+.storycap.cap-dark{background:radial-gradient(800px 600px at 85% 0%,#2c1e63,transparent 55%),var(--quase-preto)}
+.storycap.cap-gray{background:radial-gradient(820px 620px at 85% -12%,#fff,transparent 58%),var(--cinza-lavanda)}
+.storycap.cap-lav{background:radial-gradient(820px 620px at 85% -12%,#fff,transparent 58%),var(--lavanda-suave)}
+.storycap .top,.storylist .top,.storymock .top{display:flex;justify-content:space-between;align-items:center}
+.storycap .headline{margin-top:auto;margin-bottom:auto}
+.storycap h3{font-size:98px;font-weight:900;line-height:.96;letter-spacing:-.045em;color:var(--quase-preto);max-width:12ch}
+.storycap.cap-purple h3,.storycap.cap-dark h3{color:#fff}
+.storycap h3 .hl{color:var(--roxo)}
+.storycap.cap-purple h3 .hl,.storycap.cap-dark h3 .hl{color:var(--lavanda)}
+.storycap .sub{display:block;margin-top:38px;font-size:42px;font-weight:700;line-height:1.18;color:var(--corpo);max-width:20ch}
+.storycap.cap-purple .sub,.storycap.cap-dark .sub{color:var(--lavanda)}
+.storycap .visual{margin-top:54px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;max-width:780px}
+.storycap .chip{background:#fff;color:var(--roxo);border:1px solid var(--lavanda);border-radius:100px;padding:16px 24px;font-size:26px;font-weight:900;box-shadow:0 10px 24px oklch(.5 .1 285/.08)}
+.storycap.cap-purple .chip,.storycap.cap-dark .chip{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.25)}
+.storycap .bottom,.storylist .bottom,.storymock .bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto}
+.storycap .swipe{display:flex;align-items:center;gap:14px;color:var(--roxo);font-size:24px;font-weight:700}
+.storycap.cap-purple .swipe,.storycap.cap-dark .swipe{color:rgba(255,255,255,.85)}
+
+.storylist{background:var(--cinza-lavanda)}
+.storylist.white{background:#fff}.storylist.purple{background:var(--roxo)}.storylist.dark{background:var(--quase-preto)}.storylist.lav{background:var(--lavanda-suave)}
+.storylist .num,.storymock .num{font-size:30px;font-weight:800;color:var(--lavanda);letter-spacing:.08em}
+.storylist h3,.storymock h3{margin-top:30px;font-size:72px;font-weight:900;line-height:1;letter-spacing:-.04em;color:var(--quase-preto);max-width:13ch}
+.storylist.purple h3,.storylist.dark h3,.storylist.purple .lead2,.storylist.dark .lead2{color:#fff}
+.storylist .lead2,.storymock .lead2{margin-top:28px;font-size:32px;line-height:1.35;color:var(--corpo);font-weight:600;max-width:24ch}
+.storylist.purple .lead2,.storylist.dark .lead2{color:var(--lavanda)}
+.storylist .items{margin-top:42px;display:grid;gap:14px}
+.storylist .item{display:flex;align-items:center;gap:20px;background:#fff;border-radius:20px;padding:20px 24px;box-shadow:0 8px 22px oklch(.5 .1 285/.07)}
+.storylist.purple .item,.storylist.dark .item{background:rgba(255,255,255,.12);box-shadow:none;border:1px solid rgba(255,255,255,.16)}
+.storylist .item b{width:52px;height:52px;border-radius:15px;background:var(--lavanda-suave);color:var(--roxo);display:grid;place-items:center;font-size:22px;flex-shrink:0}
+.storylist .item span{font-size:32px;font-weight:800;color:var(--quase-preto);letter-spacing:-.02em}
+.storylist.purple .item span,.storylist.dark .item span{color:#fff}
+.storylist .punch{margin-top:auto;font-size:40px;font-weight:900;line-height:1.16;letter-spacing:-.02em;color:var(--quase-preto);max-width:22ch}
+.storylist .punch b{color:var(--roxo)}
+.storylist.purple .punch,.storylist.dark .punch{color:#fff}.storylist.purple .punch b,.storylist.dark .punch b{color:var(--lavanda)}
+
+.storymock{background:#fff}
+.storymock.gray{background:var(--cinza-lavanda)}.storymock.lav{background:var(--lavanda-suave)}.storymock.purple{background:var(--roxo)}.storymock.dark{background:var(--quase-preto)}
+.storymock.purple h3,.storymock.dark h3,.storymock.purple .lead2,.storymock.dark .lead2{color:#fff}.storymock.purple .lead2,.storymock.dark .lead2{color:var(--lavanda)}
+.storymock .panelgrid{margin-top:42px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.storymock .panel{background:var(--cinza-lavanda);border-radius:26px;padding:28px;min-height:220px;box-shadow:0 10px 28px oklch(.5 .1 285/.07)}
+.storymock.gray .panel,.storymock.lav .panel{background:#fff}.storymock.purple .panel,.storymock.dark .panel{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);box-shadow:none}
+.storymock .panel .label{font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--roxo);margin-bottom:14px}
+.storymock.purple .panel .label,.storymock.dark .panel .label{color:var(--lavanda)}
+.storymock .panel .big{font-size:42px;font-weight:900;line-height:1.02;letter-spacing:-.03em;color:var(--quase-preto)}
+.storymock.purple .panel .big,.storymock.dark .panel .big{color:#fff}
+.storymock .panel .small{margin-top:14px;font-size:24px;font-weight:700;line-height:1.25;color:var(--corpo)}
+.storymock.purple .panel .small,.storymock.dark .panel .small{color:var(--lavanda)}
+.storymock .flow{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.storymock .pill{background:#fff;color:var(--roxo);border:1px solid var(--lavanda);border-radius:100px;padding:9px 14px;font-size:20px;font-weight:900}
+.storymock.gray .pill,.storymock.lav .pill{background:var(--lavanda-suave)}.storymock.purple .pill,.storymock.dark .pill{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.2)}
+.storymock .turn{margin-top:auto;font-size:38px;font-weight:900;line-height:1.12;color:var(--quase-preto);letter-spacing:-.03em;max-width:21ch}
+.storymock .turn b{color:var(--roxo)}.storymock.purple .turn,.storymock.dark .turn{color:#fff}.storymock.purple .turn b,.storymock.dark .turn b{color:var(--lavanda)}
+
 /* ---------- MODO EXPORT (?export=ID) — 1 slide 1080x1350 pra PNG ---------- */
 body.export{background:#fff;padding:0}
 body.export .wrap,body.export header,body.export .post-head,body.export .hint,
@@ -228,6 +362,33 @@ body.export .exportbox .slide{transform:none!important}
     <h1>Carrosséis para aprovação</h1>
     <p class="pg-sub">Conjunto de posts do Feed Vitrine da HSales para Instagram. Arraste cada carrossel para ver os slides na sequência. Formato final 1080×1350.</p>
   </header>
+
+  <section class="grid-preview" aria-label="Prévia do feed completo">
+    <div class="grid-preview-head">
+      <div>
+        <div class="id">Prévia do grid · 12 posts</div>
+        <h2>Feed completo em movimento</h2>
+        <p>Arraste os cards para testar a composição do grid antes de fechar os carrosséis. A ordem visual aqui é só de aprovação; não exporta nada.</p>
+      </div>
+      <div class="grid-tools">
+        <button class="mini-btn" type="button" data-reset-grid>Restaurar ordem</button>
+      </div>
+    </div>
+    <div class="feed-board" data-feed-board>
+      <div class="feed-tile tile-roxo" draggable="true" data-order="1"><span class="n">01</span><span class="mk"></span><div class="t">ATENDIMENTO.<br>RESERVAS.<br>PAGAMENTOS.</div><div class="s">No automático. 24/7.</div></div>
+      <div class="feed-tile tile-cinza" draggable="true" data-order="2"><span class="n">02</span><div class="t">SEU HOTEL ESTÁ PERDENDO RESERVAS AGORA.</div><div class="s">Não é falta de demanda.</div></div>
+      <div class="feed-tile tile-branco" draggable="true" data-order="3"><span class="n">03</span><span class="mk"></span><div class="t">MENSAGEM RECEBIDA.<br>RESERVA FECHADA.</div><div class="s">5 passos →</div></div>
+      <div class="feed-tile tile-cinza" draggable="true" data-order="4"><span class="n">04</span><div class="t">SUA CONCORRÊNCIA TEM CHATBOT.</div><div class="s">Você pode ter uma IA.</div></div>
+      <div class="feed-tile tile-roxo" draggable="true" data-order="5"><span class="n">05</span><span class="mk"></span><div class="t">SEU HÓSPEDE ESTÁ EM TODO LUGAR.</div><div class="s">Seu atendimento também.</div></div>
+      <div class="feed-tile tile-branco" draggable="true" data-order="6"><span class="n">06</span><div class="t">+200 INTEGRAÇÕES.<br>UMA ÚNICA OPERAÇÃO.</div></div>
+      <div class="feed-tile tile-lav" draggable="true" data-order="7"><span class="n">07</span><div class="t">SEU CRM SE ATUALIZA SOZINHO.</div></div>
+      <div class="feed-tile tile-cinza" draggable="true" data-order="8"><span class="n">08</span><div class="t">CONVERSOU.<br>PAGOU.<br>RESERVOU.</div><div class="s">Sem sair do WhatsApp.</div></div>
+      <div class="feed-tile tile-roxo" draggable="true" data-order="9"><span class="n">09</span><span class="mk"></span><div class="t">CHECK-IN SEM CORRERIA.</div><div class="s">Comunicação automática.</div></div>
+      <div class="feed-tile tile-branco" draggable="true" data-order="10"><span class="n">10</span><div class="t">"VOU PENSAR."<br>E SUMIU.</div><div class="s">A HSales não deixa ir.</div></div>
+      <div class="feed-tile tile-lav" draggable="true" data-order="11"><span class="n">11</span><div class="t">OS MELHORES HOTÉIS NÃO ESPERAM RECLAMAR.</div></div>
+      <div class="feed-tile tile-preto" draggable="true" data-order="12"><span class="n">12</span><span class="mk"></span><div class="t">SEU HOTEL FUNCIONA 24H.</div><div class="s">Suas vendas também.</div></div>
+    </div>
+  </section>
 
   <!-- ============ POST 01 ============ -->
   <article class="post">
@@ -450,6 +611,720 @@ body.export .exportbox .slide{transform:none!important}
     <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
   </article>
 
+  <!-- ============ POST 03 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 03 · Jornada da reserva</div>
+        <h2>Mensagem recebida. Reserva fechada.</h2>
+      </div>
+      <span class="status">Em produção</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+
+        <!-- P3 Slide 1 — Capa -->
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide p3cap" data-id="p03s1">
+            <div class="geo" style="top:8%;right:-5%;width:240px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="geo" style="bottom:6%;left:-6%;width:180px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.38" d="M60 6 L114 60 L60 114 L6 60 Z M60 6 L60 114 M6 60 L114 60"/></svg></div>
+            <div class="inner">
+              <div class="top">
+                <div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div>
+                <span class="kicker light"><span class="dash"></span>5 passos</span>
+              </div>
+              <div class="headline">
+                <h3>MENSAGEM RECEBIDA.<br><span class="hl">RESERVA FECHADA.</span></h3>
+                <span class="sub">Da primeira pergunta ao pagamento.</span>
+                <div class="path">
+                  <div class="bubble">Tenho quartos para sexta?</div>
+                  <div class="arr">→</div>
+                  <div class="done">Reserva confirmada</div>
+                </div>
+              </div>
+              <div class="bottom">
+                <div class="swipe">Arraste <span class="arrow">→</span></div>
+                <div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+        <!-- P3 Slide 2 — Mecanismo -->
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Mecanismo</span>
+          <div class="slide p3steps" data-id="p03s2">
+            <div class="geo" style="top:-3%;right:-6%;width:220px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 6 L114 60 L60 114 L6 60 Z M60 6 L60 114 M6 60 L114 60"/></svg></div>
+            <div class="inner">
+              <div class="num">— 03</div>
+              <h3>Uma reserva não deveria depender de sorte.</h3>
+              <p class="lead2">Quando o hóspede chama, a HSales conduz a conversa até o próximo passo certo.</p>
+              <div class="steps">
+                <div class="step"><b>1</b><span>Atende</span></div>
+                <div class="step"><b>2</b><span>Qualifica</span></div>
+                <div class="step"><b>3</b><span>Mostra disponibilidade</span></div>
+                <div class="step"><b>4</b><span>Cobra</span></div>
+                <div class="step"><b>5</b><span>Confirma</span></div>
+              </div>
+              <div class="punch">Tudo no ritmo de quem está pronto para <b>reservar.</b></div>
+              <div class="bottom">
+                <div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div>
+                <div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+        <!-- P3 Slide 3 — Contexto único -->
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Contexto</span>
+          <div class="slide p3context" data-id="p03s3">
+            <div class="geo" style="top:9%;right:-5%;width:230px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.58" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><span class="eyebrow"><span class="dash"></span>Contexto único</span></div>
+              <h3>O hóspede não precisa repetir tudo.</h3>
+              <p class="copy">Canal, histórico, interesse, datas e status ficam no mesmo fluxo.</p>
+              <div class="mock">
+                <div class="chatbox">
+                  <div class="msg">Perguntou no Instagram.</div>
+                  <div class="msg">Continuou no WhatsApp.</div>
+                  <div class="tagline">
+                    <span class="pill">Novo lead</span>
+                    <span class="pill">Quente</span>
+                    <span class="pill">Reserva</span>
+                  </div>
+                </div>
+                <div class="pipebox">
+                  <div class="lane"><div class="l">Atendimento</div><div class="v">Mensagem recebida</div></div>
+                  <div class="lane"><div class="l">Qualificação</div><div class="v">Datas definidas</div></div>
+                  <div class="lane"><div class="l">Reserva</div><div class="v">Pagamento enviado</div></div>
+                </div>
+              </div>
+              <div class="turn">A conversa vira processo.<br>O processo vira <b>reserva.</b></div>
+              <div class="bottom">
+                <div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div>
+                <div class="dots"><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span></div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+        <!-- P3 Slide 4 — CTA -->
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p03s4">
+            <div class="geo" style="top:8%;right:-5%;width:280px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="geo" style="bottom:18%;left:-6%;width:200px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.28" d="M60 6 L114 60 L60 114 L6 60 Z M60 6 L60 114 M6 60 L114 60"/></svg></div>
+            <div class="inner">
+              <div class="top">
+                <div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div>
+                <span class="kicker on-dark"><span class="dash"></span>Conheça</span>
+              </div>
+              <div class="center">
+                <h3>Transforme cada mensagem em uma chance real de venda.</h3>
+                <p class="vibe">A IA que atende, qualifica, cobra e <b>confirma reservas.</b> 24/7.</p>
+              </div>
+              <div class="cta">
+                <span class="btn">hsales.app <span class="arrow">→</span></span>
+                <div class="bottom">
+                  <span class="handle">@hsales.app</span>
+                  <div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
+
+
+  <!-- ============ POST 04 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 04 · Chatbot vs IA</div>
+        <h2>Sua concorrência tem chatbot.</h2>
+      </div>
+      <span class="status">Em produção</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide storycap cap-gray" data-id="p04s1">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>Chatbot vs IA</span></div>
+              <div class="headline"><h3>SUA CONCORRÊNCIA<br>TEM CHATBOT.</h3><span class="sub">Você pode ter uma IA.</span><div class="visual"><span class="chip">Chatbot responde</span><span class="chip">IA vende</span></div></div>
+              <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Explicação</span>
+          <div class="slide storylist white" data-id="p04s2">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.45" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— 04</div>
+              <h3>Chatbot responde. IA entende intenção.</h3>
+              <p class="lead2">Atendimento não é o fim. É o começo da venda.</p>
+              <div class="items"><div class="item"><b>1</b><span>FAQ automática</span></div><div class="item"><b>2</b><span>Intenção do hóspede</span></div><div class="item"><b>3</b><span>Qualificação do lead</span></div><div class="item"><b>4</b><span>Caminho para reserva</span></div></div>
+              <div class="punch">Não é só responder. É <b>avançar a venda.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Na prática</span>
+          <div class="slide storymock purple" data-id="p04s3">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.25" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— Na prática</div>
+              <h3>A HSales conversa com o funil inteiro.</h3>
+              <p class="lead2">Atendimento, qualificação, disponibilidade, pagamento, confirmação e follow-up no mesmo fluxo.</p>
+              <div class="panelgrid"><div class="panel"><div class="label">Chatbot</div><div class="big">Perguntas frequentes</div><div class="small">Para quando sai do roteiro.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div><div class="panel"><div class="label">IA HSales</div><div class="big">Funil de vendas</div><div class="small">Leva a conversa para a reserva.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div></div>
+              <div class="turn">Menos operação solta.<br>Mais venda <b>acompanhada.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span><span style="background:rgba(255,255,255,.35)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p04s4">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-dark"><span class="dash"></span>Conheça</span></div>
+              <div class="center"><h3>Não coloque só respostas no WhatsApp.</h3><p class="vibe">Coloque <b>vendas.</b></p></div>
+              <div class="cta"><span class="btn">hsales.app <span class="arrow">→</span></span><div class="bottom"><span class="handle">@hsales.app</span><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div></div></div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
+
+  <!-- ============ POST 05 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 05 · Omnichannel</div>
+        <h2>Seu hóspede está em todo lugar.</h2>
+      </div>
+      <span class="status">Em produção</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide storycap cap-purple" data-id="p05s1">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.28" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-purple"><span class="dash"></span>Omnichannel</span></div>
+              <div class="headline"><h3>SEU HÓSPEDE ESTÁ<br>EM TODO LUGAR.</h3><span class="sub">Seu atendimento também.</span><div class="visual"><span class="chip">WhatsApp</span><span class="chip">Instagram</span><span class="chip">Facebook</span><span class="chip">Site</span></div></div>
+              <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:#fff"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Explicação</span>
+          <div class="slide storylist" data-id="p05s2">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.45" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— 05</div>
+              <h3>Todos os canais no mesmo atendimento.</h3>
+              <p class="lead2">O hóspede pode mudar de canal. O contexto continua.</p>
+              <div class="items"><div class="item"><b>1</b><span>WhatsApp</span></div><div class="item"><b>2</b><span>Instagram</span></div><div class="item"><b>3</b><span>Facebook</span></div><div class="item"><b>4</b><span>Site</span></div></div>
+              <div class="punch">Uma conversa só. Mesmo quando o canal <b>muda.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Na prática</span>
+          <div class="slide storymock" data-id="p05s3">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.48" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— Na prática</div>
+              <h3>Uma caixa de entrada. Um histórico. Um funil.</h3>
+              <p class="lead2">Sua equipe enxerga o que aconteceu, onde o lead está e qual é o próximo passo.</p>
+              <div class="panelgrid"><div class="panel"><div class="label">Inbox único</div><div class="big">4 canais</div><div class="small">Sem conversa perdida.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div><div class="panel"><div class="label">Pipeline</div><div class="big">Atendimento → Reserva</div><div class="small">Tudo acompanhado.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div></div>
+              <div class="turn">Menos operação solta.<br>Mais venda <b>acompanhada.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p05s4">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-dark"><span class="dash"></span>Conheça</span></div>
+              <div class="center"><h3>Atenda em qualquer canal sem perder a venda.</h3><p class="vibe">A HSales centraliza conversas e transforma atendimento em <b>reserva.</b></p></div>
+              <div class="cta"><span class="btn">hsales.app <span class="arrow">→</span></span><div class="bottom"><span class="handle">@hsales.app</span><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div></div></div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
+
+  <!-- ============ POST 06 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 06 · Integrações</div>
+        <h2>+200 integrações. Uma única operação.</h2>
+      </div>
+      <span class="status">Em produção</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide storycap" data-id="p06s1">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>Integrações</span></div>
+              <div class="headline"><h3>+200 INTEGRAÇÕES.<br>UMA ÚNICA OPERAÇÃO.</h3><span class="sub">Conecte o que seu hotel já usa.</span><div class="visual"><span class="chip">PMS</span><span class="chip">Motor</span><span class="chip">Pagamentos</span><span class="chip">CRM</span></div></div>
+              <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Explicação</span>
+          <div class="slide storylist white" data-id="p06s2">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.45" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— 06</div>
+              <h3>Sua operação não precisa viver em abas soltas.</h3>
+              <p class="lead2">A HSales conecta dados, canais e etapas para reduzir retrabalho.</p>
+              <div class="items"><div class="item"><b>1</b><span>PMS e motor de reservas</span></div><div class="item"><b>2</b><span>Channel manager</span></div><div class="item"><b>3</b><span>Gateway de pagamento</span></div><div class="item"><b>4</b><span>CRM e relatórios</span></div></div>
+              <div class="punch">Menos ferramenta brigando. Mais operação <b>falando junto.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Na prática</span>
+          <div class="slide storymock gray" data-id="p06s3">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.48" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— Na prática</div>
+              <h3>Disponibilidade, preço e status no mesmo fluxo.</h3>
+              <p class="lead2">A conversa consulta o que precisa e devolve uma resposta útil para vender.</p>
+              <div class="panelgrid"><div class="panel"><div class="label">Consulta</div><div class="big">Datas + quartos</div><div class="small">Disponibilidade em tempo real.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div><div class="panel"><div class="label">Operação</div><div class="big">Reserva + pagamento</div><div class="small">Status atualizado.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div></div>
+              <div class="turn">Menos operação solta.<br>Mais venda <b>acompanhada.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p06s4">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-dark"><span class="dash"></span>Conheça</span></div>
+              <div class="center"><h3>Conecte atendimento, reserva e pagamento.</h3><p class="vibe">Uma operação única para vender melhor, todos os dias.</p></div>
+              <div class="cta"><span class="btn">hsales.app <span class="arrow">→</span></span><div class="bottom"><span class="handle">@hsales.app</span><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div></div></div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
+
+  <!-- ============ POST 07 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 07 · CRM automático</div>
+        <h2>Seu CRM se atualiza sozinho.</h2>
+      </div>
+      <span class="status">Em produção</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide storycap cap-lav" data-id="p07s1">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>CRM automático</span></div>
+              <div class="headline"><h3>SEU CRM SE<br>ATUALIZA SOZINHO.</h3><span class="sub">Do lead ao pipeline, sem planilha manual.</span><div class="visual"><span class="chip">Novo lead</span><span class="chip">Quente</span><span class="chip">Reservado</span></div></div>
+              <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Explicação</span>
+          <div class="slide storylist" data-id="p07s2">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.45" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— 07</div>
+              <h3>O lead entra. A etapa muda. O histórico fica.</h3>
+              <p class="lead2">A HSales organiza cada oportunidade conforme a conversa avança.</p>
+              <div class="items"><div class="item"><b>1</b><span>Classifica o interesse</span></div><div class="item"><b>2</b><span>Move o card no funil</span></div><div class="item"><b>3</b><span>Salva o histórico</span></div><div class="item"><b>4</b><span>Mostra o próximo passo</span></div></div>
+              <div class="punch">Sua equipe acompanha venda. Não caça informação.</div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Na prática</span>
+          <div class="slide storymock" data-id="p07s3">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.48" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— Na prática</div>
+              <h3>Pipeline visual para saber onde agir.</h3>
+              <p class="lead2">Atendimento, reservado, hóspede e pós-venda ficam claros para todos.</p>
+              <div class="panelgrid"><div class="panel"><div class="label">Atendimento</div><div class="big">12 leads novos</div><div class="small">Prioridade visível.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div><div class="panel"><div class="label">Reservas</div><div class="big">R$ 18.420</div><div class="small">Oportunidades quentes.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div></div>
+              <div class="turn">Menos operação solta.<br>Mais venda <b>acompanhada.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p07s4">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-dark"><span class="dash"></span>Conheça</span></div>
+              <div class="center"><h3>Pare de atualizar CRM na mão.</h3><p class="vibe">Deixe a conversa alimentar o funil automaticamente.</p></div>
+              <div class="cta"><span class="btn">hsales.app <span class="arrow">→</span></span><div class="bottom"><span class="handle">@hsales.app</span><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div></div></div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
+
+  <!-- ============ POST 08 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 08 · Pagamento integrado</div>
+        <h2>Conversou. Pagou. Reservou.</h2>
+      </div>
+      <span class="status">Em produção</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide storycap cap-gray" data-id="p08s1">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>Pagamento integrado</span></div>
+              <div class="headline"><h3>CONVERSOU.<br>PAGOU.<br>RESERVOU.</h3><span class="sub">Sem sair do WhatsApp.</span><div class="visual"><span class="chip">Cotação</span><span class="chip">Link</span><span class="chip">Confirmação</span></div></div>
+              <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Explicação</span>
+          <div class="slide storylist white" data-id="p08s2">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.45" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— 08</div>
+              <h3>Quando o hóspede decide, o pagamento não pode virar atrito.</h3>
+              <p class="lead2">A HSales envia o caminho certo para fechar antes que a intenção esfrie.</p>
+              <div class="items"><div class="item"><b>1</b><span>Gera cotação</span></div><div class="item"><b>2</b><span>Envia link de pagamento</span></div><div class="item"><b>3</b><span>Confirma a reserva</span></div><div class="item"><b>4</b><span>Atualiza o status</span></div></div>
+              <div class="punch">Menos vai-e-volta. Mais reserva <b>paga.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Na prática</span>
+          <div class="slide storymock gray" data-id="p08s3">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.48" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— Na prática</div>
+              <h3>A cobrança entra no fluxo da conversa.</h3>
+              <p class="lead2">O hóspede recebe o próximo passo sem depender de operação manual.</p>
+              <div class="panelgrid"><div class="panel"><div class="label">WhatsApp</div><div class="big">Link enviado</div><div class="small">Pagamento seguro.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div><div class="panel"><div class="label">Reserva</div><div class="big">Confirmada</div><div class="small">Status sincronizado.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div></div>
+              <div class="turn">Menos operação solta.<br>Mais venda <b>acompanhada.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p08s4">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-dark"><span class="dash"></span>Conheça</span></div>
+              <div class="center"><h3>Transforme intenção em pagamento.</h3><p class="vibe">A IA conduz o hóspede até a reserva confirmada.</p></div>
+              <div class="cta"><span class="btn">hsales.app <span class="arrow">→</span></span><div class="bottom"><span class="handle">@hsales.app</span><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div></div></div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
+
+  <!-- ============ POST 09 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 09 · Check-in automático</div>
+        <h2>Check-in sem correria.</h2>
+      </div>
+      <span class="status">Em produção</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide storycap cap-purple" data-id="p09s1">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.28" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-purple"><span class="dash"></span>Check-in automático</span></div>
+              <div class="headline"><h3>CHECK-IN<br>SEM CORRERIA.</h3><span class="sub">Comunicação automática.</span><div class="visual"><span class="chip">Antes</span><span class="chip">Durante</span><span class="chip">Depois</span></div></div>
+              <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:#fff"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Explicação</span>
+          <div class="slide storylist white" data-id="p09s2">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.45" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— 09</div>
+              <h3>A reserva não termina quando o pagamento cai.</h3>
+              <p class="lead2">A comunicação certa reduz dúvida, atraso e sobrecarga na recepção.</p>
+              <div class="items"><div class="item"><b>1</b><span>Aviso antes do check-in</span></div><div class="item"><b>2</b><span>Confirmação de dados</span></div><div class="item"><b>3</b><span>Orientações do hotel</span></div><div class="item"><b>4</b><span>Check-out e pós-estadia</span></div></div>
+              <div class="punch">Menos pergunta repetida. Mais experiência <b>organizada.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Na prática</span>
+          <div class="slide storymock" data-id="p09s3">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.48" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— Na prática</div>
+              <h3>Mensagens automáticas no tempo certo.</h3>
+              <p class="lead2">Regras de lembrete ajudam recepção e hóspede a chegarem preparados.</p>
+              <div class="panelgrid"><div class="panel"><div class="label">Hoje</div><div class="big">Check-ins previstos</div><div class="small">Mensagens enviadas.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div><div class="panel"><div class="label">Amanhã</div><div class="big">Check-outs</div><div class="small">Próximos avisos.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div></div>
+              <div class="turn">Menos operação solta.<br>Mais venda <b>acompanhada.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p09s4">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-dark"><span class="dash"></span>Conheça</span></div>
+              <div class="center"><h3>Prepare o hóspede antes da chegada.</h3><p class="vibe">Comunicação automática para uma operação mais leve.</p></div>
+              <div class="cta"><span class="btn">hsales.app <span class="arrow">→</span></span><div class="bottom"><span class="handle">@hsales.app</span><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div></div></div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
+
+  <!-- ============ POST 10 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 10 · Follow-up</div>
+        <h2>"Vou pensar." E sumiu.</h2>
+      </div>
+      <span class="status">Em produção</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide storycap" data-id="p10s1">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>Follow-up</span></div>
+              <div class="headline"><h3>"VOU PENSAR."<br>E SUMIU.</h3><span class="sub">A HSales não deixa ir.</span><div class="visual"><span class="chip">Follow-up</span><span class="chip">Recuperação</span><span class="chip">Venda</span></div></div>
+              <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Explicação</span>
+          <div class="slide storylist" data-id="p10s2">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.45" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— 10</div>
+              <h3>Nem todo hóspede compra na primeira conversa.</h3>
+              <p class="lead2">Mas todo lead quente merece continuidade antes de esfriar.</p>
+              <div class="items"><div class="item"><b>1</b><span>Identifica indecisos</span></div><div class="item"><b>2</b><span>Retoma no momento certo</span></div><div class="item"><b>3</b><span>Reforça a oferta</span></div><div class="item"><b>4</b><span>Traz de volta para a reserva</span></div></div>
+              <div class="punch">Quem não acompanha, perde para quem <b>responde depois.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Na prática</span>
+          <div class="slide storymock lav" data-id="p10s3">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.48" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— Na prática</div>
+              <h3>Follow-up automático sem parecer insistência.</h3>
+              <p class="lead2">A conversa continua com contexto, timing e próximo passo claro.</p>
+              <div class="panelgrid"><div class="panel"><div class="label">Lead quente</div><div class="big">Sem resposta há 2h</div><div class="small">Retomar conversa.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div><div class="panel"><div class="label">Oferta</div><div class="big">Quarto Luxo</div><div class="small">Disponível até hoje.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div></div>
+              <div class="turn">Menos operação solta.<br>Mais venda <b>acompanhada.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p10s4">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-dark"><span class="dash"></span>Conheça</span></div>
+              <div class="center"><h3>Recupere reservas antes que esfriem.</h3><p class="vibe">A HSales acompanha o lead até virar decisão.</p></div>
+              <div class="cta"><span class="btn">hsales.app <span class="arrow">→</span></span><div class="bottom"><span class="handle">@hsales.app</span><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div></div></div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
+
+  <!-- ============ POST 11 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 11 · Pós-venda e reputação</div>
+        <h2>Os melhores hotéis não esperam reclamar.</h2>
+      </div>
+      <span class="status">Em produção</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide storycap cap-lav" data-id="p11s1">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>Pós-venda e reputação</span></div>
+              <div class="headline"><h3>OS MELHORES HOTÉIS<br>NÃO ESPERAM RECLAMAR.</h3><span class="sub">Eles perguntam antes.</span><div class="visual"><span class="chip">NPS</span><span class="chip">Avaliação</span><span class="chip">Retorno</span></div></div>
+              <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Explicação</span>
+          <div class="slide storylist white" data-id="p11s2">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.45" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— 11</div>
+              <h3>Pós-venda também é venda.</h3>
+              <p class="lead2">Quem acompanha a experiência cria reputação, recompra e indicação.</p>
+              <div class="items"><div class="item"><b>1</b><span>Pesquisa de satisfação</span></div><div class="item"><b>2</b><span>Avaliação pós-estadia</span></div><div class="item"><b>3</b><span>Alertas para a equipe</span></div><div class="item"><b>4</b><span>Histórico do hóspede</span></div></div>
+              <div class="punch">Reclamação tarde custa caro. Feedback cedo vira <b>melhoria.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Na prática</span>
+          <div class="slide storymock gray" data-id="p11s3">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.48" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— Na prática</div>
+              <h3>Avaliações organizadas para agir rápido.</h3>
+              <p class="lead2">O hotel sabe quem ficou satisfeito, quem precisa de atenção e onde melhorar.</p>
+              <div class="panelgrid"><div class="panel"><div class="label">NPS</div><div class="big">9,4</div><div class="small">Hóspedes satisfeitos.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div><div class="panel"><div class="label">Atenção</div><div class="big">3 respostas</div><div class="small">Ação antes do ruído.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div></div>
+              <div class="turn">Menos operação solta.<br>Mais venda <b>acompanhada.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><div class="dots"><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p11s4">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-dark"><span class="dash"></span>Conheça</span></div>
+              <div class="center"><h3>Cuide da experiência depois da reserva.</h3><p class="vibe">A HSales ajuda seu hotel a vender, atender e aprender.</p></div>
+              <div class="cta"><span class="btn">hsales.app <span class="arrow">→</span></span><div class="bottom"><span class="handle">@hsales.app</span><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div></div></div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
+
+  <!-- ============ POST 12 ============ -->
+  <article class="post">
+    <div class="post-head">
+      <div>
+        <div class="id">Post 12 · CTA final</div>
+        <h2>Seu hotel funciona 24h.</h2>
+      </div>
+      <span class="status">Em produção</span>
+    </div>
+    <div class="carousel">
+      <button class="navbtn prev" aria-label="Anterior">‹</button>
+      <button class="navbtn next" aria-label="Próximo">›</button>
+      <div class="track">
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide storycap cap-dark" data-id="p12s1">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.28" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-purple"><span class="dash"></span>CTA final</span></div>
+              <div class="headline"><h3>SEU HOTEL<br>FUNCIONA 24H.</h3><span class="sub">Suas vendas também.</span><div class="visual"><span class="chip">Atende</span><span class="chip">Reserva</span><span class="chip">Cobra</span><span class="chip">Acompanha</span></div></div>
+              <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:#fff"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Explicação</span>
+          <div class="slide storylist purple" data-id="p12s2">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.25" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— 12</div>
+              <h3>A operação não para quando a recepção fecha.</h3>
+              <p class="lead2">De madrugada, no fim de semana ou em outro idioma, a intenção de reserva continua acontecendo.</p>
+              <div class="items"><div class="item"><b>1</b><span>Atendimento 24/7</span></div><div class="item"><b>2</b><span>Funil automático</span></div><div class="item"><b>3</b><span>Pagamento integrado</span></div><div class="item"><b>4</b><span>Pós-venda organizado</span></div></div>
+              <div class="punch">Vendas diretas trabalhando enquanto o hotel <b>funciona.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Na prática</span>
+          <div class="slide storymock dark" data-id="p12s3">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.25" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="num">— Na prática</div>
+              <h3>A HSales é a camada de vendas do seu hotel.</h3>
+              <p class="lead2">Do primeiro contato ao pós-venda, cada etapa conectada para converter mais.</p>
+              <div class="panelgrid"><div class="panel"><div class="label">Hoje</div><div class="big">Leads atendidos</div><div class="small">Sem fila de espera.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div><div class="panel"><div class="label">Este mês</div><div class="big">Reservas diretas</div><div class="small">Sem comissão por venda.</div><div class="flow"><span class="pill">HSales</span><span class="pill">CRM</span></div></div></div>
+              <div class="turn">Menos operação solta.<br>Mais venda <b>acompanhada.</b></div>
+              <div class="bottom"><div class="logo" style="--s:46px"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span><span style="background:rgba(255,255,255,.35)"></span></div></div>
+            </div>
+          </div>
+        </div></div>
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p12s4">
+            <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="inner">
+              <div class="top"><div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div><span class="kicker on-dark"><span class="dash"></span>Conheça</span></div>
+              <div class="center"><h3>Seu hotel pode vender 24 horas por dia.</h3><p class="vibe">Conheça a IA que transforma mensagem em reserva.</p></div>
+              <div class="cta"><span class="btn">hsales.app <span class="arrow">→</span></span><div class="bottom"><span class="handle">@hsales.app</span><div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div></div></div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
+  </article>
+
   <!-- Próximos posts entram aqui conforme produzidos -->
 
   <footer><p>Portfólio interno de criativos · <b>HSales</b> · Feed Vitrine</p></footer>
@@ -476,6 +1351,47 @@ document.querySelectorAll('.carousel').forEach(car=>{
   car.querySelector('.prev').onclick=()=>track.scrollBy({left:-step(),behavior:'smooth'});
   car.querySelector('.next').onclick=()=>track.scrollBy({left:step(),behavior:'smooth'});
 });
+
+// Grid completo: arrastar cards para testar a composição do feed
+const board=document.querySelector('[data-feed-board]');
+if(board){
+  const original=[...board.children].map(el=>el.dataset.order);
+  let dragged=null;
+  board.querySelectorAll('.feed-tile').forEach(tile=>{
+    tile.addEventListener('dragstart',()=>{
+      dragged=tile;
+      tile.classList.add('dragging');
+    });
+    tile.addEventListener('dragend',()=>{
+      tile.classList.remove('dragging');
+      board.querySelectorAll('.feed-tile').forEach(t=>t.classList.remove('over'));
+      dragged=null;
+    });
+    tile.addEventListener('dragover',e=>{
+      e.preventDefault();
+      if(tile!==dragged)tile.classList.add('over');
+    });
+    tile.addEventListener('dragleave',()=>tile.classList.remove('over'));
+    tile.addEventListener('drop',e=>{
+      e.preventDefault();
+      tile.classList.remove('over');
+      if(!dragged||dragged===tile)return;
+      const cards=[...board.children];
+      const from=cards.indexOf(dragged);
+      const to=cards.indexOf(tile);
+      board.insertBefore(dragged,from<to?tile.nextSibling:tile);
+    });
+  });
+  const reset=document.querySelector('[data-reset-grid]');
+  if(reset){
+    reset.addEventListener('click',()=>{
+      original.forEach(id=>{
+        const tile=board.querySelector('[data-order="'+id+'"]');
+        if(tile)board.appendChild(tile);
+      });
+    });
+  }
+}
 
 // MODO EXPORT: ?export=p01s1 → isola 1 slide em 1080x1350 (pra render PNG)
 const exp=new URLSearchParams(location.search).get('export');
