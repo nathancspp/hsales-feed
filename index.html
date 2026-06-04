@@ -1053,7 +1053,94 @@ body.export .exportbox .slide{transform:none!important}
             <div class="geo" style="top:8%;right:-5%;width:250px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
             <div class="inner">
               <div class="top"><div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div><span class="kicker light"><span class="dash"></span>CRM automático</span></div>
-              <div class="headline"><h3>SEU CRM SE<br>ATUALIZA <span style="color:var(--roxo)">SOZINHO?</span></h3><span class="sub">A IA atualiza o pipeline.<br>Você só acompanha.</span><div class="visual"><span class="chip">Novo lead</span><span class="chip">Quente</span><span class="chip">Reservado</span></div></div>
+              <div class="headline"><h3>SEU CRM SE<br>ATUALIZA <span style="color:var(--roxo)">SOZINHO?</span></h3><span class="sub">A IA atualiza o pipeline.<br>Você só acompanha.</span>
+                <!-- Pipeline CRM ilustrado -->
+                <div style="margin-top:44px;width:100%">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+                    <span style="font-size:20px;font-weight:800;color:var(--quase-preto);letter-spacing:-.01em">Pipeline de reservas</span>
+                    <div style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--lavanda);padding:7px 16px;border-radius:100px;box-shadow:0 4px 12px oklch(.5 .1 285/.08)">
+                      <div style="width:9px;height:9px;border-radius:50%;background:#10B981;flex-shrink:0"></div>
+                      <span style="font-size:17px;font-weight:900;color:var(--roxo)">IA ativa</span>
+                    </div>
+                  </div>
+                  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+                    <!-- ATENDIMENTO -->
+                    <div style="border-radius:16px;overflow:hidden">
+                      <div style="background:var(--roxo);padding:12px 14px;display:flex;justify-content:space-between;align-items:center">
+                        <span style="font-size:15px;font-weight:900;color:#fff;letter-spacing:.04em">ATENDIMENTO</span>
+                        <span style="font-size:14px;font-weight:800;color:rgba(255,255,255,.8);background:rgba(255,255,255,.18);padding:2px 8px;border-radius:100px">3</span>
+                      </div>
+                      <div style="background:#F4F2FF;padding:7px;display:flex;flex-direction:column;gap:6px">
+                        <div style="background:#fff;border-radius:10px;padding:12px 13px;box-shadow:0 2px 8px oklch(.5 .1 285/.09)">
+                          <div style="font-size:17px;font-weight:800;color:var(--quase-preto);margin-bottom:3px">Ana Lima</div>
+                          <div style="font-size:13px;color:#999;margin-bottom:7px">WhatsApp · 3min</div>
+                          <div style="font-size:12px;font-weight:800;color:#16A34A;background:#F0FDF4;padding:3px 8px;border-radius:100px;display:inline-block">● Quente</div>
+                        </div>
+                        <div style="background:#fff;border-radius:10px;padding:12px 13px;box-shadow:0 2px 8px oklch(.5 .1 285/.09)">
+                          <div style="font-size:17px;font-weight:800;color:var(--quase-preto);margin-bottom:3px">Carlos M.</div>
+                          <div style="font-size:13px;color:#999;margin-bottom:7px">Instagram · 18min</div>
+                          <div style="font-size:12px;font-weight:800;color:var(--roxo);background:var(--lavanda-suave);padding:3px 8px;border-radius:100px;display:inline-block">● Novo lead</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- RESERVADO -->
+                    <div style="border-radius:16px;overflow:hidden">
+                      <div style="background:#3B82F6;padding:12px 14px;display:flex;justify-content:space-between;align-items:center">
+                        <span style="font-size:15px;font-weight:900;color:#fff;letter-spacing:.04em">RESERVADO</span>
+                        <span style="font-size:14px;font-weight:800;color:rgba(255,255,255,.8);background:rgba(255,255,255,.18);padding:2px 8px;border-radius:100px">2</span>
+                      </div>
+                      <div style="background:#EFF6FF;padding:7px;display:flex;flex-direction:column;gap:6px">
+                        <div style="background:#fff;border-radius:10px;padding:12px 13px;box-shadow:0 2px 8px rgba(59,130,246,.12)">
+                          <div style="font-size:17px;font-weight:800;color:var(--quase-preto);margin-bottom:2px">Sofia R.</div>
+                          <div style="font-size:13px;color:#3B82F6;font-weight:700;margin-bottom:7px">Vista Mar · R$1.740</div>
+                          <div style="font-size:12px;font-weight:800;color:#16A34A;background:#F0FDF4;padding:3px 8px;border-radius:100px;display:inline-block">● Movido auto</div>
+                        </div>
+                        <div style="background:#fff;border-radius:10px;padding:12px 13px;box-shadow:0 2px 8px rgba(59,130,246,.12)">
+                          <div style="font-size:17px;font-weight:800;color:var(--quase-preto);margin-bottom:2px">Pedro H.</div>
+                          <div style="font-size:13px;color:#3B82F6;font-weight:700;margin-bottom:7px">Suite Family · R$2.800</div>
+                          <div style="font-size:12px;font-weight:800;color:#16A34A;background:#F0FDF4;padding:3px 8px;border-radius:100px;display:inline-block">● Movido auto</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- RECEPÇÃO -->
+                    <div style="border-radius:16px;overflow:hidden">
+                      <div style="background:#F59E0B;padding:12px 14px;display:flex;justify-content:space-between;align-items:center">
+                        <span style="font-size:15px;font-weight:900;color:#fff;letter-spacing:.04em">RECEPÇÃO</span>
+                        <span style="font-size:14px;font-weight:800;color:rgba(255,255,255,.8);background:rgba(255,255,255,.18);padding:2px 8px;border-radius:100px">1</span>
+                      </div>
+                      <div style="background:#FFFBEB;padding:7px;display:flex;flex-direction:column;gap:6px">
+                        <div style="background:#fff;border-radius:10px;padding:12px 13px;box-shadow:0 2px 8px rgba(245,158,11,.12)">
+                          <div style="font-size:17px;font-weight:800;color:var(--quase-preto);margin-bottom:2px">Luiza T.</div>
+                          <div style="font-size:13px;color:#F59E0B;font-weight:700;margin-bottom:7px">Check-in · hoje 14h</div>
+                          <div style="font-size:12px;font-weight:800;color:#16A34A;background:#F0FDF4;padding:3px 8px;border-radius:100px;display:inline-block">● Aviso enviado</div>
+                        </div>
+                        <div style="background:#fff;border-radius:10px;padding:12px 13px;box-shadow:0 2px 8px rgba(245,158,11,.12)">
+                          <div style="font-size:17px;font-weight:800;color:var(--quase-preto);margin-bottom:2px">Thales N.</div>
+                          <div style="font-size:13px;color:#F59E0B;font-weight:700">Check-out · amanhã</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- HÓSPEDE -->
+                    <div style="border-radius:16px;overflow:hidden">
+                      <div style="background:#10B981;padding:12px 14px;display:flex;justify-content:space-between;align-items:center">
+                        <span style="font-size:15px;font-weight:900;color:#fff;letter-spacing:.04em">HÓSPEDE</span>
+                        <span style="font-size:14px;font-weight:800;color:rgba(255,255,255,.8);background:rgba(255,255,255,.18);padding:2px 8px;border-radius:100px">2</span>
+                      </div>
+                      <div style="background:#F0FDF4;padding:7px;display:flex;flex-direction:column;gap:6px">
+                        <div style="background:#fff;border-radius:10px;padding:12px 13px;box-shadow:0 2px 8px rgba(16,185,129,.12)">
+                          <div style="font-size:17px;font-weight:800;color:var(--quase-preto);margin-bottom:2px">Marcos A.</div>
+                          <div style="font-size:13px;color:#10B981;font-weight:700;margin-bottom:7px">⭐ Pesquisa enviada</div>
+                          <div style="font-size:12px;font-weight:800;color:var(--roxo);background:var(--lavanda-suave);padding:3px 8px;border-radius:100px;display:inline-block">NPS 9</div>
+                        </div>
+                        <div style="background:#fff;border-radius:10px;padding:12px 13px;box-shadow:0 2px 8px rgba(16,185,129,.12)">
+                          <div style="font-size:17px;font-weight:800;color:var(--quase-preto);margin-bottom:2px">Rita V.</div>
+                          <div style="font-size:13px;color:#10B981;font-weight:700">Check-out amanhã</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="bottom"><div class="swipe">Arraste <span class="arrow">→</span></div><div class="dots"><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div></div>
             </div>
           </div>
