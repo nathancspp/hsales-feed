@@ -23,66 +23,160 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--quase-preto);
   -webkit-font-smoothing:antialiased;line-height:1.6;padding-bottom:80px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 
-/* ---------- Header ---------- */
+/* ---------- Header da página ---------- */
 header{padding:54px 0 30px}
 .brand{display:flex;align-items:center;gap:12px;--s:42px}
-.logo-mark{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;
+.pg-logo-mark{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;
   gap:calc(var(--s)*0.07);width:var(--s);height:var(--s);border-radius:calc(var(--s)*0.28);background:var(--roxo)}
-.logo-mark::after{content:"";position:absolute;z-index:-1;left:14%;bottom:calc(var(--s)*-0.04);
+.pg-logo-mark::after{content:"";position:absolute;z-index:-1;left:14%;bottom:calc(var(--s)*-0.04);
   width:calc(var(--s)*0.34);height:calc(var(--s)*0.34);background:var(--roxo);border-radius:0 0 0 72%;transform:rotate(8deg)}
-.logo-mark .bar{position:relative;z-index:1;width:calc(var(--s)*0.16);height:calc(var(--s)*0.5);
+.pg-logo-mark .bar{position:relative;z-index:1;width:calc(var(--s)*0.16);height:calc(var(--s)*0.5);
   background:#fff;border-radius:calc(var(--s)*0.055);box-shadow:0 calc(var(--s)*0.055) 0 var(--alto-relevo)}
-.logo-mark .dot{position:relative;z-index:1;width:calc(var(--s)*0.17);height:calc(var(--s)*0.17);
+.pg-logo-mark .dot{position:relative;z-index:1;width:calc(var(--s)*0.17);height:calc(var(--s)*0.17);
   background:#fff;border-radius:calc(var(--s)*0.05);box-shadow:0 calc(var(--s)*0.055) 0 var(--alto-relevo)}
-.logo-word{font-weight:900;font-size:calc(var(--s)*0.74);letter-spacing:-0.03em;color:var(--quase-preto)}
-.kicker{display:inline-flex;align-items:center;gap:8px;margin-top:30px;
+.pg-logo-word{font-weight:900;font-size:calc(var(--s)*0.74);letter-spacing:-0.03em;color:var(--quase-preto)}
+.pg-kicker{display:inline-flex;align-items:center;gap:8px;margin-top:30px;
   font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
   color:var(--roxo);background:var(--lavanda-suave);padding:8px 16px;border-radius:100px}
 h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-0.03em;line-height:1.05;margin:18px 0 14px}
-.sub{color:var(--corpo);font-size:1.05rem;max-width:60ch}
+.pg-sub{color:var(--corpo);font-size:1.05rem;max-width:60ch}
 
-/* ---------- Post card ---------- */
+/* ---------- Card de post ---------- */
 .post{background:#fff;border-radius:24px;box-shadow:0 20px 60px oklch(0.5 0.12 285 / 0.10);
   border:1px solid #ECEAF6;margin-top:46px;overflow:hidden}
 .post-head{padding:32px 34px 0;display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between}
 .post-head .id{font-size:0.8rem;font-weight:800;color:var(--roxo);letter-spacing:0.05em;text-transform:uppercase}
 .post-head h2{font-size:1.5rem;font-weight:800;letter-spacing:-0.02em}
-.post-head .meta{font-size:0.85rem;color:var(--corpo);font-weight:600}
 .status{display:inline-flex;align-items:center;gap:7px;font-size:0.78rem;font-weight:700;
   padding:6px 14px;border-radius:100px;background:#FFF4D6;color:#9A6B00}
 .status::before{content:"";width:7px;height:7px;border-radius:50%;background:#E0A100}
 
-/* ---------- Carousel ---------- */
+/* ---------- Carrossel (slides vivos, escalados) ---------- */
 .carousel{position:relative;padding:26px 0 8px}
 .track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
   padding:6px 34px 22px;scrollbar-width:thin;scrollbar-color:var(--lavanda) transparent}
 .track::-webkit-scrollbar{height:8px}
 .track::-webkit-scrollbar-thumb{background:var(--lavanda);border-radius:100px}
 .track::-webkit-scrollbar-track{background:transparent}
-.frame{flex:0 0 auto;width:300px;scroll-snap-align:center;border-radius:16px;overflow:hidden;
-  box-shadow:0 12px 30px oklch(0.4 0.1 285 / 0.16);border:1px solid #ECEAF6;background:#fff;
-  position:relative;transition:transform .35s var(--ease)}
-.frame:hover{transform:translateY(-4px)}
-.frame img{width:100%;display:block;aspect-ratio:1080/1350;object-fit:cover}
-.frame .tag{position:absolute;top:12px;left:12px;background:rgba(26,26,46,.72);color:#fff;
+.frame{flex:0 0 300px;scroll-snap-align:center}
+.slidebox{width:100%;position:relative;overflow:hidden;border-radius:16px;
+  box-shadow:0 12px 30px oklch(0.4 0.1 285 / 0.16);border:1px solid #ECEAF6;background:#fff}
+.slidebox .tag{position:absolute;top:12px;left:12px;z-index:30;background:rgba(26,26,46,.72);color:#fff;
   font-size:0.7rem;font-weight:700;padding:5px 11px;border-radius:100px;backdrop-filter:blur(6px)}
 .hint{padding:0 34px 28px;color:var(--corpo);font-size:0.85rem;display:flex;align-items:center;gap:8px}
 .hint .arrow{color:var(--roxo);font-weight:900}
-
-/* nav arrows (desktop) */
 .navbtn{position:absolute;top:46%;transform:translateY(-50%);z-index:5;
   width:48px;height:48px;border-radius:50%;border:1px solid #E5E3F0;background:#fff;
   display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 22px oklch(0.4 0.1 285 / 0.16);
   transition:transform .25s var(--ease),background .25s,color .25s;color:var(--roxo);font-size:1.3rem;font-weight:800}
 .navbtn:hover{background:var(--roxo);color:#fff;transform:translateY(-50%) scale(1.08)}
 .navbtn.prev{left:8px} .navbtn.next{right:8px}
-@media(max-width:760px){.navbtn{display:none}.frame{width:78vw}}
+@media(max-width:760px){.navbtn{display:none}.frame{flex:0 0 78vw}}
 
-/* ---------- Footer ---------- */
 footer{text-align:center;margin-top:60px;color:var(--corpo);font-size:0.85rem}
 footer b{color:var(--roxo)}
-.empty{margin-top:46px;padding:50px;text-align:center;border:2px dashed var(--lavanda);
-  border-radius:24px;color:var(--corpo)}
+
+/* =========================================================
+   SLIDES (fonte única — 1080x1350, escalados via JS)
+   ========================================================= */
+.slide{width:1080px;height:1350px;position:absolute;top:0;left:0;
+  transform-origin:top left;overflow:hidden;font-family:'Inter',sans-serif}
+
+.geo{position:absolute;pointer-events:none;z-index:0}
+.geo svg{display:block;width:100%;height:auto}
+.geo-stroke{fill:none;stroke-width:2.5}
+
+/* logo dentro do slide */
+.logo{display:flex;align-items:center;gap:14px;--s:64px}
+.logo-mark{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;
+  gap:calc(var(--s)*0.07);width:var(--s);height:var(--s);border-radius:calc(var(--s)*0.28);background:var(--roxo)}
+.logo-mark.on-dark{background:#fff}
+.logo-mark::after{content:"";position:absolute;z-index:-1;left:14%;bottom:calc(var(--s)*-0.04);
+  width:calc(var(--s)*0.34);height:calc(var(--s)*0.34);background:var(--roxo);border-radius:0 0 0 72%;transform:rotate(8deg)}
+.logo-mark.on-dark::after{background:#fff}
+.logo-mark .bar{position:relative;z-index:1;width:calc(var(--s)*0.16);height:calc(var(--s)*0.5);
+  background:#fff;border-radius:calc(var(--s)*0.055);box-shadow:0 calc(var(--s)*0.055) 0 var(--alto-relevo)}
+.logo-mark .dot{position:relative;z-index:1;width:calc(var(--s)*0.17);height:calc(var(--s)*0.17);
+  background:#fff;border-radius:calc(var(--s)*0.05);box-shadow:0 calc(var(--s)*0.055) 0 var(--alto-relevo)}
+.logo-mark.on-dark .bar,.logo-mark.on-dark .dot{background:var(--roxo);box-shadow:0 calc(var(--s)*0.055) 0 var(--alto-relevo)}
+.logo-word{font-weight:900;font-size:calc(var(--s)*0.74);letter-spacing:-0.03em;line-height:1;color:#fff}
+.logo-word.dark{color:var(--quase-preto)}
+
+.kicker{display:inline-flex;align-items:center;gap:10px;
+  font-size:22px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  padding:12px 22px;border-radius:100px}
+.kicker.on-purple{color:#fff;background:rgba(255,255,255,0.14)}
+.kicker.on-dark{color:var(--lavanda);background:rgba(196,181,244,0.12)}
+.kicker .dash{width:18px;height:2.5px;background:currentColor;border-radius:2px}
+
+.inner{position:relative;z-index:2;height:100%;padding:96px 90px;display:flex;flex-direction:column}
+.dots{display:flex;gap:10px;align-items:center}
+.dots span{width:10px;height:10px;border-radius:50%}
+.dots .on{transform:scale(1.25)}
+
+/* SLIDE 1 — CAPA roxo */
+.s1{background:radial-gradient(900px 600px at 80% -10%, var(--roxo-vibrante), transparent 60%),
+   radial-gradient(700px 500px at -5% 110%, var(--roxo-escuro), transparent 55%),var(--roxo)}
+.s1 .top{display:flex;justify-content:space-between;align-items:center}
+.s1 .headline{margin-top:auto;margin-bottom:auto}
+.s1 .headline h3{font-weight:900;font-size:118px;line-height:0.98;letter-spacing:-0.04em;color:#fff}
+.s1 .headline .sub{display:block;margin-top:44px;font-size:54px;font-weight:800;line-height:1.06;letter-spacing:-0.02em;color:var(--lavanda)}
+.s1 .headline .sub .b{color:#fff}
+.s1 .bottom{display:flex;justify-content:space-between;align-items:flex-end}
+.s1 .swipe{display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.85);font-size:24px;font-weight:600}
+.s1 .swipe .arrow{font-size:34px;line-height:1}
+
+/* SLIDE 2 — cinza-lavanda */
+.s2{background:var(--cinza-lavanda)}
+.s2 .num{font-size:30px;font-weight:800;color:var(--lavanda);letter-spacing:.08em}
+.s2 h3{margin-top:34px;font-size:86px;font-weight:800;line-height:1.0;letter-spacing:-0.035em;color:var(--quase-preto);max-width:14ch}
+.s2 .body{margin-top:40px;font-size:36px;line-height:1.5;color:var(--corpo);max-width:24ch}
+.s2 .highlight{margin-top:32px;font-size:38px;line-height:1.4;font-weight:700;color:var(--roxo);max-width:24ch}
+.s2 .highlight b{color:var(--roxo-escuro)}
+.s2 .bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+
+/* SLIDE 3 — branco (enriquecido: blobs + cards sólidos + ícones) */
+.s3{background:var(--branco)}
+.s3 .blob{position:absolute;border-radius:50%;filter:blur(10px);z-index:0;pointer-events:none}
+.s3 .blob.a{width:520px;height:520px;top:-160px;right:-150px;background:radial-gradient(circle,oklch(0.86 0.07 290 / .55),transparent 70%)}
+.s3 .blob.b{width:460px;height:460px;bottom:-180px;left:-160px;background:radial-gradient(circle,oklch(0.9 0.05 300 / .5),transparent 70%)}
+.s3 .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:24px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--roxo);background:var(--lavanda-suave);padding:13px 24px;border-radius:100px}
+.s3 .eyebrow .dash{width:18px;height:2.5px;background:currentColor;border-radius:2px}
+.s3 .nots{margin-top:54px;display:flex;flex-direction:column;gap:22px}
+.s3 .card{display:flex;align-items:center;gap:30px;background:var(--cinza-lavanda);
+  border-radius:26px;padding:30px 36px;box-shadow:0 10px 30px oklch(0.5 0.1 285 / 0.07)}
+.s3 .card .ic{flex-shrink:0;width:78px;height:78px;border-radius:20px;
+  background:linear-gradient(135deg,var(--roxo),var(--roxo-vibrante));display:grid;place-items:center;
+  box-shadow:0 10px 24px oklch(0.5 0.2 285 / 0.35)}
+.s3 .card .ic svg{width:36px;height:36px;stroke:#fff;stroke-width:3.2;fill:none;stroke-linecap:round}
+.s3 .card .t{font-size:46px;font-weight:800;color:var(--quase-preto);letter-spacing:-0.02em}
+.s3 .turn{margin-top:auto;background:linear-gradient(135deg,var(--quase-preto),#2a1f52);
+  border-radius:28px;padding:48px 44px;position:relative;overflow:hidden}
+.s3 .turn .l1{font-size:36px;color:var(--lavanda);font-weight:500;position:relative;z-index:2}
+.s3 .turn .l2{margin-top:8px;font-size:62px;font-weight:900;color:#fff;letter-spacing:-0.03em;line-height:1.02;position:relative;z-index:2}
+.s3 .turn .l2 b{color:var(--lavanda)}
+.s3 .turn .tgeo{position:absolute;right:-30px;bottom:-40px;width:240px;opacity:.5;z-index:1}
+.s3 .bottom{margin-top:40px;display:flex;justify-content:space-between;align-items:center}
+
+/* SLIDE 4 — CTA quase-preto */
+.s4{background:radial-gradient(800px 600px at 85% 0%, #2c1e63, transparent 55%),var(--quase-preto)}
+.s4 .top{display:flex;justify-content:space-between;align-items:center}
+.s4 .center{margin-top:auto;margin-bottom:auto}
+.s4 .center h3{font-size:78px;font-weight:900;line-height:1.02;letter-spacing:-0.03em;color:#fff;max-width:15ch}
+.s4 .center .vibe{margin-top:40px;font-size:46px;line-height:1.25;color:var(--lavanda);font-weight:600;max-width:20ch}
+.s4 .center .vibe b{color:#fff;font-weight:800}
+.s4 .cta{margin-top:auto}
+.s4 .btn{display:inline-flex;align-items:center;gap:16px;background:#fff;color:var(--roxo);font-weight:800;font-size:40px;padding:30px 52px;border-radius:100px;letter-spacing:-0.01em}
+.s4 .btn .arrow{font-size:42px}
+.s4 .bottom{margin-top:46px;display:flex;justify-content:space-between;align-items:center}
+.s4 .bottom .handle{color:rgba(255,255,255,.6);font-size:26px;font-weight:600}
+
+/* ---------- MODO EXPORT (?export=ID) — 1 slide 1080x1350 pra PNG ---------- */
+body.export{background:#fff;padding:0}
+body.export .wrap,body.export header,body.export .post-head,body.export .hint,
+body.export footer,body.export .navbtn,body.export .tag,body.export .track::-webkit-scrollbar{display:none!important}
+body.export .exportbox{display:block!important;width:1080px;height:1350px;position:relative;overflow:hidden}
+body.export .exportbox .slide{transform:none!important}
 </style>
 </head>
 <body>
@@ -90,12 +184,12 @@ footer b{color:var(--roxo)}
 <div class="wrap">
   <header>
     <div class="brand">
-      <span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span>
-      <span class="logo-word">Sales</span>
+      <span class="pg-logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span>
+      <span class="pg-logo-word">Sales</span>
     </div>
-    <span class="kicker">Feed Vitrine · Portfólio de Criativos</span>
+    <span class="pg-kicker">Feed Vitrine · Portfólio de Criativos</span>
     <h1>Carrosséis para aprovação</h1>
-    <p class="sub">Conjunto de posts do Feed Vitrine da HSales para Instagram. Arraste cada carrossel para ver os slides na sequência. Formato final 1080×1350.</p>
+    <p class="pg-sub">Conjunto de posts do Feed Vitrine da HSales para Instagram. Arraste cada carrossel para ver os slides na sequência. Formato final 1080×1350.</p>
   </header>
 
   <!-- ============ POST 01 ============ -->
@@ -111,10 +205,98 @@ footer b{color:var(--roxo)}
       <button class="navbtn prev" aria-label="Anterior">‹</button>
       <button class="navbtn next" aria-label="Próximo">›</button>
       <div class="track">
-        <div class="frame"><span class="tag">1 · Capa</span><img src="assets/post01-slide1.png" alt="Slide 1 — Capa"></div>
-        <div class="frame"><span class="tag">2 · Problema</span><img src="assets/post01-slide2.png" alt="Slide 2 — Problema"></div>
-        <div class="frame"><span class="tag">3 · Virada</span><img src="assets/post01-slide3.png" alt="Slide 3 — Virada"></div>
-        <div class="frame"><span class="tag">4 · CTA</span><img src="assets/post01-slide4.png" alt="Slide 4 — CTA"></div>
+
+        <!-- Slide 1 -->
+        <div class="frame"><div class="slidebox"><span class="tag">1 · Capa</span>
+          <div class="slide s1" data-id="p01s1">
+            <div class="geo" style="top:7%;right:-4%;width:300px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.30" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="geo" style="bottom:4%;left:-5%;width:230px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:#fff;opacity:.22" d="M60 6 L114 60 L60 114 L6 60 Z M60 6 L60 114 M6 60 L114 60"/></svg></div>
+            <div class="inner">
+              <div class="top">
+                <div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div>
+                <span class="kicker on-purple"><span class="dash"></span>Manifesto</span>
+              </div>
+              <div class="headline">
+                <h3>ATENDIMENTO.<br>RESERVAS.<br>PAGAMENTOS.</h3>
+                <span class="sub"><span class="b">No automático.</span><br>24 horas por dia.</span>
+              </div>
+              <div class="bottom">
+                <div class="swipe">Arraste <span class="arrow">→</span></div>
+                <div class="dots"><span class="on" style="background:#fff"></span><span style="background:rgba(255,255,255,.4)"></span><span style="background:rgba(255,255,255,.4)"></span><span style="background:rgba(255,255,255,.4)"></span></div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+        <!-- Slide 2 -->
+        <div class="frame"><div class="slidebox"><span class="tag">2 · Problema</span>
+          <div class="slide s2" data-id="p01s2">
+            <div class="geo" style="top:-3%;right:-6%;width:260px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.55" d="M60 6 L114 60 L60 114 L6 60 Z M60 6 L60 114 M6 60 L114 60"/></svg></div>
+            <div class="inner">
+              <div class="num">— 01</div>
+              <h3>O HSales nasceu de um problema real:</h3>
+              <p class="body">Hotéis perdem reservas toda semana porque não conseguem responder no tempo que o hóspede precisa.</p>
+              <p class="highlight">Por isso criamos uma IA que atende, qualifica, negocia, cobra e <b>fecha reservas</b> — automaticamente.</p>
+              <div class="bottom">
+                <div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div>
+                <div class="dots"><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span></div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+        <!-- Slide 3 -->
+        <div class="frame"><div class="slidebox"><span class="tag">3 · Virada</span>
+          <div class="slide s3" data-id="p01s3">
+            <div class="blob a"></div>
+            <div class="blob b"></div>
+            <div class="geo" style="top:9%;right:-5%;width:230px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.6" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="geo" style="top:30%;left:-7%;width:160px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 6 L114 60 L60 114 L6 60 Z M60 6 L60 114 M6 60 L114 60"/></svg></div>
+            <div class="inner">
+              <div class="top"><span class="eyebrow"><span class="dash"></span>A diferença</span></div>
+              <div class="nots">
+                <div class="card"><span class="ic"><svg viewBox="0 0 24 24"><path d="M18 6 L6 18 M6 6 L18 18"/></svg></span><span class="t">Sem fila de mensagens.</span></div>
+                <div class="card"><span class="ic"><svg viewBox="0 0 24 24"><path d="M18 6 L6 18 M6 6 L18 18"/></svg></span><span class="t">Sem horário comercial.</span></div>
+                <div class="card"><span class="ic"><svg viewBox="0 0 24 24"><path d="M18 6 L6 18 M6 6 L18 18"/></svg></span><span class="t">Sem reservas na concorrência.</span></div>
+              </div>
+              <div class="turn">
+                <svg class="tgeo" viewBox="0 0 120 120"><path style="fill:none;stroke:var(--lavanda);stroke-width:2.5;opacity:.45" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg>
+                <div class="l1">Hotelaria não precisa de mais esforço.</div>
+                <div class="l2">Precisa de mais <b>conversões.</b></div>
+              </div>
+              <div class="bottom">
+                <div class="logo" style="--s:46px"><span class="logo-mark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word dark">Sales</span></div>
+                <div class="dots"><span style="background:var(--lavanda)"></span><span style="background:var(--lavanda)"></span><span class="on" style="background:var(--roxo)"></span><span style="background:var(--lavanda)"></span></div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+        <!-- Slide 4 — CTA -->
+        <div class="frame"><div class="slidebox"><span class="tag">4 · CTA</span>
+          <div class="slide s4" data-id="p01s4">
+            <div class="geo" style="top:8%;right:-5%;width:280px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.4" d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z M60 8 L60 60 M60 60 L106 34 M60 60 L14 34"/></svg></div>
+            <div class="geo" style="bottom:18%;left:-6%;width:200px"><svg viewBox="0 0 120 120"><path class="geo-stroke" style="stroke:var(--lavanda);opacity:.28" d="M60 6 L114 60 L60 114 L6 60 Z M60 6 L60 114 M6 60 L114 60"/></svg></div>
+            <div class="inner">
+              <div class="top">
+                <div class="logo"><span class="logo-mark on-dark"><span class="bar"></span><span class="dot"></span><span class="bar"></span></span><span class="logo-word">Sales</span></div>
+                <span class="kicker on-dark"><span class="dash"></span>Conheça</span>
+              </div>
+              <div class="center">
+                <h3>Sua operação pode ser mais inteligente.</h3>
+                <p class="vibe">Transforma o seu hotel numa <b>máquina de reservas.</b> 24/7.</p>
+              </div>
+              <div class="cta">
+                <span class="btn">hsales.app <span class="arrow">→</span></span>
+                <div class="bottom">
+                  <span class="handle">@hsales.app</span>
+                  <div class="dots"><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span style="background:rgba(255,255,255,.35)"></span><span class="on" style="background:#fff"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
       </div>
     </div>
     <div class="hint"><span class="arrow">→</span> Arraste para o lado para ver os 4 slides</div>
@@ -122,19 +304,42 @@ footer b{color:var(--roxo)}
 
   <!-- Próximos posts entram aqui conforme produzidos -->
 
-  <footer>
-    <p>Portfólio interno de criativos · <b>HSales</b> · Feed Vitrine</p>
-  </footer>
+  <footer><p>Portfólio interno de criativos · <b>HSales</b> · Feed Vitrine</p></footer>
 </div>
 
 <script>
-// Setas de navegação por carrossel
+// Escala cada slide (1080x1350) pra caber no seu .slidebox, responsivo
+function fit(box){
+  const slide=box.querySelector('.slide');
+  if(!slide)return;
+  const scale=box.clientWidth/1080;
+  slide.style.transform='scale('+scale+')';
+  box.style.height=(1350*scale)+'px';
+}
+const ro=new ResizeObserver(es=>es.forEach(e=>fit(e.target)));
+document.querySelectorAll('.slidebox').forEach(b=>{ro.observe(b);fit(b);});
+// refit quando as fontes carregam (evita reflow torto)
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(()=>document.querySelectorAll('.slidebox').forEach(fit));}
+
+// Setas
 document.querySelectorAll('.carousel').forEach(car=>{
   const track=car.querySelector('.track');
-  const step=()=>Math.min(track.clientWidth*0.85, 340);
+  const step=()=>Math.min(track.clientWidth*0.85,340);
   car.querySelector('.prev').onclick=()=>track.scrollBy({left:-step(),behavior:'smooth'});
   car.querySelector('.next').onclick=()=>track.scrollBy({left:step(),behavior:'smooth'});
 });
+
+// MODO EXPORT: ?export=p01s1 → isola 1 slide em 1080x1350 (pra render PNG)
+const exp=new URLSearchParams(location.search).get('export');
+if(exp){
+  const slide=document.querySelector('.slide[data-id="'+exp+'"]');
+  if(slide){
+    document.body.classList.add('export');
+    const box=document.createElement('div');box.className='exportbox';
+    document.body.appendChild(box);box.appendChild(slide);
+    slide.style.transform='none';
+  }
+}
 </script>
 </body>
 </html>
